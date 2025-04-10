@@ -12,6 +12,7 @@ namespace dms.pages.Main
     public partial class BasePage : UserControl
     {
         protected static MainPage main = null;
+        //test comment
         //protected static dmsDataSet.smbusersDataTable dt_smbusers;
         //protected static dmsDataSet.usersDataTable dt_dmsusers;
         //protected static dmsDataSet.smbgroupsDataTable dt_smbgroups;
