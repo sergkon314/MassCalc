@@ -1,0 +1,9 @@
+c:\users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\bin\Debug\SampleProgram2.exe
+c:\users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\bin\Debug\SampleProgram2.pdb
+c:\users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\obj\x86\Debug\SampleProgram2.csproj.GenerateResource.Cache
+c:\users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\obj\x86\Debug\SampleProgram2.exe
+c:\users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\obj\x86\Debug\SampleProgram2.pdb
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\bin\Debug\SampleProgram2.exe.config
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\obj\x86\Debug\dms.pages.MainFrm.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\obj\x86\Debug\dms.pages.Properties.Resources.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\SampleProgram2\obj\x86\Debug\SampleProgram2.csprojResolveAssemblyReference.cache

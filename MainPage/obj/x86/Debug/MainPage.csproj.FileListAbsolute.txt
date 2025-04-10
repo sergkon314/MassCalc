@@ -1,0 +1,8 @@
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\MainPage.csproj.GenerateResource.Cache
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\bin\Debug\MainPage.dll.config
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\bin\Debug\MainPage.dll
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\bin\Debug\MainPage.pdb
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\MainPage.dll
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\MainPage.pdb
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Properties.Resources.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Main.MainPage.resources
