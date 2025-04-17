@@ -42,7 +42,7 @@
             this.menuToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(978, 24);
+            this.mainMenu.Size = new System.Drawing.Size(1221, 24);
             this.mainMenu.TabIndex = 1;
             this.mainMenu.Text = "menuStrip2";
             // 
@@ -58,14 +58,14 @@
             // page1ToolStripMenuItem
             // 
             this.page1ToolStripMenuItem.Name = "page1ToolStripMenuItem";
-            this.page1ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.page1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.page1ToolStripMenuItem.Text = "item1";
             this.page1ToolStripMenuItem.Click += new System.EventHandler(this.page1ToolStripMenuItem_Click);
             // 
             // page2ToolStripMenuItem
             // 
             this.page2ToolStripMenuItem.Name = "page2ToolStripMenuItem";
-            this.page2ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.page2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.page2ToolStripMenuItem.Text = "item2";
             this.page2ToolStripMenuItem.Click += new System.EventHandler(this.page2ToolStripMenuItem_Click);
             // 
@@ -74,17 +74,17 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 24);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(978, 384);
+            this.panel.Size = new System.Drawing.Size(1221, 933);
             this.panel.TabIndex = 2;
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSize = true;
             this.Controls.Add(this.panel);
             this.Controls.Add(this.mainMenu);
             this.Name = "MainPage";
-            this.Size = new System.Drawing.Size(978, 408);
+            this.Size = new System.Drawing.Size(1221, 957);
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
             this.ResumeLayout(false);

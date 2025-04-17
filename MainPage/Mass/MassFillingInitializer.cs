@@ -297,7 +297,7 @@ namespace dms.pages.Main
                     dtf = dt.Select("project_group=" + Convert.ToString(ind)) as DMSdbDataSet.mass_projectRow[];
                 }
             }
-            if (dtf.Length == 0)
+            if (dtf.Length == 0 && cb_filter.Text != "")
             {
                 DmsMsgBoxs.OkFail("Проектов в группе " + cb_filter.Text + " не найдено.");
             }
