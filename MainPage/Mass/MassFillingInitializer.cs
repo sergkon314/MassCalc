@@ -7,6 +7,7 @@ using System.Data;
 //using MySql.Data.Types;
 using System.Drawing;
 using dms.pages.Utils;
+using dms.pages.Utils.DMSdbDataSetTableAdapters;
 
 namespace dms.pages.Main
 {
@@ -30,7 +31,7 @@ namespace dms.pages.Main
         protected virtual void InitBidsDataGridView(DataGridView dg)
         {
             dg.BackgroundColor = SystemColors.Control;
-            //dg.DataSource = new dmsMass.mass_bidDataTable();
+            dg.DataSource = new DMSdbDataSet.mass_bidDataTable();
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg.RowHeadersVisible = false;
             dg.AllowUserToAddRows = false;
@@ -122,8 +123,8 @@ namespace dms.pages.Main
         protected virtual void InitBidsDataDataGridView(DataGridView dg)
         {
             dg.BackgroundColor = SystemColors.Control;
-            //dmsMass.mass_data_bidDataTable dt = new dmsMass.mass_data_bidDataTable();
-            //dg.DataSource = dt;
+            DMSdbDataSet.mass_data_bidDataTable dt = new DMSdbDataSet.mass_data_bidDataTable();
+            dg.DataSource = dt;
             dg.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dg.RowHeadersVisible = false;
             dg.AllowUserToAddRows = false;
@@ -233,7 +234,7 @@ namespace dms.pages.Main
         {
             cb_projects.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_projects.Sorted = true;
-            //cb_projects.DataSource = dt_projects;
+            cb_projects.DataSource = dt_projects;
             cb_projects.DisplayMember = "name";
             cb_projects.ValueMember = "id";
             //cb_projects.SelectedIndex = 0;
@@ -265,60 +266,61 @@ namespace dms.pages.Main
 
 
 
-        //protected virtual int ApplyProjectFilter(ComboBox cb_filter, ComboBox cb_target, dmsMass.mass_projectDataTable dt, bool onlyMyProjects)
-        //{
-        //    int ind = cb_filter.SelectedIndex;
-        //    //dmsMass.mass_projectRow[] dtf;
+        protected virtual int ApplyProjectFilter(ComboBox cb_filter, ComboBox cb_target, DMSdbDataSet.mass_projectDataTable dt, bool onlyMyProjects)
+        {
+            int ind = cb_filter.SelectedIndex;
+            DMSdbDataSet.mass_projectRow[] dtf;
 
-        //    if (ind == 0)
-        //    {
-        //        if (onlyMyProjects)
-        //        {
-        //            dtf = dt.Select("master=" + MainPage.CurrentUser2.Uid) as dmsMass.mass_projectRow[];
+            if (ind == 0)
+            {
+                if (onlyMyProjects)
+                {
+                    //dtf = dt.Select("master=" + MainPage.CurrentUser2.Uid) as dmsMass.mass_projectRow[];
+                    dtf = dt.Select() as DMSdbDataSet.mass_projectRow[];
 
-        //        }
-        //        else
-        //        {
-        //            dtf = dt.Select() as dmsMass.mass_projectRow[];
-        //        }
-        //    }
-        //    else
-        //    {
+                }
+                else
+                {
+                    dtf = dt.Select() as DMSdbDataSet.mass_projectRow[];
+                }
+            }
+            else
+            {
 
-        //        if (onlyMyProjects)
-        //        {
-        //            dtf = dt.Select("project_group=" + Convert.ToString(ind) + " and master=" + MainPage.CurrentUser2.Uid) as dmsMass.mass_projectRow[];
+                if (onlyMyProjects)
+                {
+                    //dtf = dt.Select("project_group=" + Convert.ToString(ind) + " and master=" + MainPage.CurrentUser2.Uid) as dmsMass.mass_projectRow[];
+                    dtf = dt.Select("project_group=" + Convert.ToString(ind)) as DMSdbDataSet.mass_projectRow[];
+                }
+                else
+                {
+                    dtf = dt.Select("project_group=" + Convert.ToString(ind)) as DMSdbDataSet.mass_projectRow[];
+                }
+            }
+            if (dtf.Length == 0)
+            {
+                DmsMsgBoxs.OkFail("Проектов в группе " + cb_filter.Text + " не найдено.");
+            }
+            cb_target.DataSource = dtf;
+            cb_target.DisplayMember = "name";
+            cb_target.ValueMember = "id";
 
-        //        }
-        //        else
-        //        {
-        //            dtf = dt.Select("project_group=" + Convert.ToString(ind)) as dmsMass.mass_projectRow[];
-        //        }
-        //    }
-        //    if (dtf.Length == 0)
-        //    {
-        //        DmsMsgBoxs.OkFail("Проектов в группе " + cb_filter.Text + " не найдено.");
-        //    }
-        //    cb_target.DataSource = dtf;
-        //    cb_target.DisplayMember = "name";
-        //    cb_target.ValueMember = "id";
+            return cb_target.Items.Count;
+        }
 
-        //    return cb_target.Items.Count;
-        //}
+        protected virtual DMSdbDataSet.mass_projectRow GetSelectedProject()
+        {
+            return cb_projects.SelectedItem as DMSdbDataSet.mass_projectRow;
+        }
 
-        //protected virtual dmsMass.mass_projectRow GetSelectedProject()
-        //{
-        //    return cb_projects.SelectedItem as dmsMass.mass_projectRow;
-        //}
+        protected virtual int ApplyBidFilter(ComboBox cb_filter, DataGridView dg, DMSdbDataSet.mass_bidDataTable dt)
+        {
+            string filter = cb_filter.SelectedValue as string;
+            (dg.DataSource as DataTable).DefaultView.RowFilter = filter;
+            return dg.Rows.Count;
+        }
 
-        //protected virtual int ApplyBidFilter(ComboBox cb_filter, DataGridView dg, dmsMass.mass_bidDataTable dt)
-        //{
-        //    string filter = cb_filter.SelectedValue as string;
-        //    (dg.DataSource as DataTable).DefaultView.RowFilter = filter;
-        //    return dg.Rows.Count;
-        //}
-
-        protected virtual bool IsEditableByCurrntUser(string uid, uint claim, uint version_by)
+        protected virtual bool IsEditableByCurrntUser(string uid, int claim, int version_by)
         {
             //if (claim == 0 && version_by == 0 && User2.IsCurrentUser(User2.UserByUid(uid)))
             //{
@@ -327,7 +329,7 @@ namespace dms.pages.Main
             return false;
         }
 
-        protected virtual string getHClaim(uint claim)
+        protected virtual string getHClaim(int claim)
         {
             string sanction = BID_CLAIM_UNDEFINED;
             switch (claim)
@@ -379,17 +381,17 @@ namespace dms.pages.Main
         //    DateTime dt = datetime.GetDateTime();
         //    return dt.ToLongDateString() + " " + dt.ToShortTimeString();
         //}
-        //protected virtual void FillCustomFields(dmsMass.mass_bidDataTable dt)
-        //{
-        //    foreach (dmsMass.mass_bidRow r in dt.Rows)
-        //    {
-        //        r.hclaim = getHClaim(r.claim);
-        //        r.huid = getHUid(r.uid);
-        //        r.hgid = getHGid(r.uid);
-        //        r.hdatetime = getHDateTime(r.date_time);
-        //        r.beditable = IsEditableByCurrntUser(r.uid, r.claim, r.version_by);
-        //    }
-        //}
+        protected virtual void FillCustomFields(DMSdbDataSet.mass_bidDataTable dt)
+        {
+            foreach (DMSdbDataSet.mass_bidRow r in dt.Rows)
+            {
+                r.hclaim = getHClaim(r.claim);
+                //r.huid = getHUid(r.uid);
+                //r.hgid = getHGid(r.uid);
+                //r.hdatetime = getHDateTime(r.date_time);
+                r.beditable = true; //IsEditableByCurrntUser(r.uid, r.claim, r.version_by);
+            }
+        }
         protected virtual void SetBidsTableTitle(GroupBox gb, int num, string name, int count)
         {
             gb.Text = "Заявки по проекту '" + name + "' (" + num + "/" + count + ")";

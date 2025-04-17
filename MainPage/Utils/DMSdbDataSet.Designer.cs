@@ -491,21 +491,9 @@ namespace dms.pages.Utils {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnstat;
-            
-            private global::System.Data.DataColumn columnlogin;
-            
             private global::System.Data.DataColumn columnuid;
             
-            private global::System.Data.DataColumn columnwho;
-            
-            private global::System.Data.DataColumn columnotdel;
-            
-            private global::System.Data.DataColumn columnwheen;
-            
             private global::System.Data.DataColumn columndate_time;
-            
-            private global::System.Data.DataColumn columnproject_id;
             
             private global::System.Data.DataColumn columnmass_project_id;
             
@@ -513,11 +501,19 @@ namespace dms.pages.Utils {
             
             private global::System.Data.DataColumn columnbid_name;
             
-            private global::System.Data.DataColumn columnis_sanction;
-            
             private global::System.Data.DataColumn columnclaim;
             
             private global::System.Data.DataColumn columnversion_by;
+            
+            private global::System.Data.DataColumn columnhclaim;
+            
+            private global::System.Data.DataColumn columnbeditable;
+            
+            private global::System.Data.DataColumn columnhuid;
+            
+            private global::System.Data.DataColumn columnhgid;
+            
+            private global::System.Data.DataColumn columnhdatetime;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -562,22 +558,6 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn statColumn {
-                get {
-                    return this.columnstat;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn loginColumn {
-                get {
-                    return this.columnlogin;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn uidColumn {
                 get {
                     return this.columnuid;
@@ -586,41 +566,9 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn whoColumn {
-                get {
-                    return this.columnwho;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn otdelColumn {
-                get {
-                    return this.columnotdel;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn wheenColumn {
-                get {
-                    return this.columnwheen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn date_timeColumn {
                 get {
                     return this.columndate_time;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn project_idColumn {
-                get {
-                    return this.columnproject_id;
                 }
             }
             
@@ -650,14 +598,6 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn is_sanctionColumn {
-                get {
-                    return this.columnis_sanction;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn claimColumn {
                 get {
                     return this.columnclaim;
@@ -669,6 +609,46 @@ namespace dms.pages.Utils {
             public global::System.Data.DataColumn version_byColumn {
                 get {
                     return this.columnversion_by;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn hclaimColumn {
+                get {
+                    return this.columnhclaim;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn beditableColumn {
+                get {
+                    return this.columnbeditable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn huidColumn {
+                get {
+                    return this.columnhuid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn hgidColumn {
+                get {
+                    return this.columnhgid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn hdatetimeColumn {
+                get {
+                    return this.columnhdatetime;
                 }
             }
             
@@ -709,24 +689,22 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public mass_bidRow Addmass_bidRow(int id, int stat, string login, string uid, string who, string otdel, string wheen, System.DateTime date_time, string project_id, int mass_project_id, string description, string bid_name, string is_sanction, int claim, int version_by) {
+            public mass_bidRow Addmass_bidRow(int id, string uid, System.DateTime date_time, int mass_project_id, string description, string bid_name, int claim, int version_by, string hclaim, bool beditable, string huid, string hgid, string hdatetime) {
                 mass_bidRow rowmass_bidRow = ((mass_bidRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
-                        stat,
-                        login,
                         uid,
-                        who,
-                        otdel,
-                        wheen,
                         date_time,
-                        project_id,
                         mass_project_id,
                         description,
                         bid_name,
-                        is_sanction,
                         claim,
-                        version_by};
+                        version_by,
+                        hclaim,
+                        beditable,
+                        huid,
+                        hgid,
+                        hdatetime};
                 rowmass_bidRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowmass_bidRow);
                 return rowmass_bidRow;
@@ -757,20 +735,18 @@ namespace dms.pages.Utils {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columnstat = base.Columns["stat"];
-                this.columnlogin = base.Columns["login"];
                 this.columnuid = base.Columns["uid"];
-                this.columnwho = base.Columns["who"];
-                this.columnotdel = base.Columns["otdel"];
-                this.columnwheen = base.Columns["wheen"];
                 this.columndate_time = base.Columns["date_time"];
-                this.columnproject_id = base.Columns["project_id"];
                 this.columnmass_project_id = base.Columns["mass_project_id"];
                 this.columndescription = base.Columns["description"];
                 this.columnbid_name = base.Columns["bid_name"];
-                this.columnis_sanction = base.Columns["is_sanction"];
                 this.columnclaim = base.Columns["claim"];
                 this.columnversion_by = base.Columns["version_by"];
+                this.columnhclaim = base.Columns["hclaim"];
+                this.columnbeditable = base.Columns["beditable"];
+                this.columnhuid = base.Columns["huid"];
+                this.columnhgid = base.Columns["hgid"];
+                this.columnhdatetime = base.Columns["hdatetime"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -778,59 +754,42 @@ namespace dms.pages.Utils {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnstat = new global::System.Data.DataColumn("stat", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstat);
-                this.columnlogin = new global::System.Data.DataColumn("login", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlogin);
                 this.columnuid = new global::System.Data.DataColumn("uid", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuid);
-                this.columnwho = new global::System.Data.DataColumn("who", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwho);
-                this.columnotdel = new global::System.Data.DataColumn("otdel", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnotdel);
-                this.columnwheen = new global::System.Data.DataColumn("wheen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwheen);
                 this.columndate_time = new global::System.Data.DataColumn("date_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_time);
-                this.columnproject_id = new global::System.Data.DataColumn("project_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproject_id);
                 this.columnmass_project_id = new global::System.Data.DataColumn("mass_project_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmass_project_id);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
                 this.columnbid_name = new global::System.Data.DataColumn("bid_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbid_name);
-                this.columnis_sanction = new global::System.Data.DataColumn("is_sanction", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnis_sanction);
                 this.columnclaim = new global::System.Data.DataColumn("claim", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnclaim);
                 this.columnversion_by = new global::System.Data.DataColumn("version_by", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnversion_by);
+                this.columnhclaim = new global::System.Data.DataColumn("hclaim", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhclaim);
+                this.columnbeditable = new global::System.Data.DataColumn("beditable", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbeditable);
+                this.columnhuid = new global::System.Data.DataColumn("huid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhuid);
+                this.columnhgid = new global::System.Data.DataColumn("hgid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhgid);
+                this.columnhdatetime = new global::System.Data.DataColumn("hdatetime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhdatetime);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnstat.AllowDBNull = false;
-                this.columnlogin.AllowDBNull = false;
-                this.columnlogin.MaxLength = 50;
                 this.columnuid.AllowDBNull = false;
                 this.columnuid.MaxLength = 20;
-                this.columnwho.AllowDBNull = false;
-                this.columnwho.MaxLength = 100;
-                this.columnotdel.AllowDBNull = false;
-                this.columnotdel.MaxLength = 100;
-                this.columnwheen.AllowDBNull = false;
-                this.columnwheen.MaxLength = 100;
                 this.columndate_time.AllowDBNull = false;
-                this.columnproject_id.AllowDBNull = false;
-                this.columnproject_id.MaxLength = 100;
                 this.columnmass_project_id.AllowDBNull = false;
                 this.columndescription.AllowDBNull = false;
                 this.columndescription.MaxLength = 255;
                 this.columnbid_name.AllowDBNull = false;
                 this.columnbid_name.MaxLength = 255;
-                this.columnis_sanction.AllowDBNull = false;
-                this.columnis_sanction.MaxLength = 20;
                 this.columnclaim.AllowDBNull = false;
             }
             
@@ -1240,8 +1199,11 @@ namespace dms.pages.Utils {
                 this.columny.AllowDBNull = false;
                 this.columnz.AllowDBNull = false;
                 this.columnmx.AllowDBNull = false;
+                this.columnmx.DefaultValue = ((decimal)(0m));
                 this.columnmy.AllowDBNull = false;
+                this.columnmy.DefaultValue = ((decimal)(0m));
                 this.columnmz.AllowDBNull = false;
+                this.columnmz.DefaultValue = ((decimal)(0m));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3341,28 +3303,6 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int stat {
-                get {
-                    return ((int)(this[this.tablemass_bid.statColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.statColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string login {
-                get {
-                    return ((string)(this[this.tablemass_bid.loginColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.loginColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string uid {
                 get {
                     return ((string)(this[this.tablemass_bid.uidColumn]));
@@ -3374,56 +3314,12 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string who {
-                get {
-                    return ((string)(this[this.tablemass_bid.whoColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.whoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string otdel {
-                get {
-                    return ((string)(this[this.tablemass_bid.otdelColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.otdelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string wheen {
-                get {
-                    return ((string)(this[this.tablemass_bid.wheenColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.wheenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime date_time {
                 get {
                     return ((global::System.DateTime)(this[this.tablemass_bid.date_timeColumn]));
                 }
                 set {
                     this[this.tablemass_bid.date_timeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string project_id {
-                get {
-                    return ((string)(this[this.tablemass_bid.project_idColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.project_idColumn] = value;
                 }
             }
             
@@ -3462,17 +3358,6 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string is_sanction {
-                get {
-                    return ((string)(this[this.tablemass_bid.is_sanctionColumn]));
-                }
-                set {
-                    this[this.tablemass_bid.is_sanctionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int claim {
                 get {
                     return ((int)(this[this.tablemass_bid.claimColumn]));
@@ -3500,6 +3385,86 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string hclaim {
+                get {
+                    try {
+                        return ((string)(this[this.tablemass_bid.hclaimColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'hclaim\' в таблице \'mass_bid\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemass_bid.hclaimColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool beditable {
+                get {
+                    try {
+                        return ((bool)(this[this.tablemass_bid.beditableColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'beditable\' в таблице \'mass_bid\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemass_bid.beditableColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string huid {
+                get {
+                    try {
+                        return ((string)(this[this.tablemass_bid.huidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'huid\' в таблице \'mass_bid\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemass_bid.huidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string hgid {
+                get {
+                    try {
+                        return ((string)(this[this.tablemass_bid.hgidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'hgid\' в таблице \'mass_bid\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemass_bid.hgidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string hdatetime {
+                get {
+                    try {
+                        return ((string)(this[this.tablemass_bid.hdatetimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'hdatetime\' в таблице \'mass_bid\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemass_bid.hdatetimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isversion_byNull() {
                 return this.IsNull(this.tablemass_bid.version_byColumn);
             }
@@ -3508,6 +3473,66 @@ namespace dms.pages.Utils {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setversion_byNull() {
                 this[this.tablemass_bid.version_byColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IshclaimNull() {
+                return this.IsNull(this.tablemass_bid.hclaimColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SethclaimNull() {
+                this[this.tablemass_bid.hclaimColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsbeditableNull() {
+                return this.IsNull(this.tablemass_bid.beditableColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetbeditableNull() {
+                this[this.tablemass_bid.beditableColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IshuidNull() {
+                return this.IsNull(this.tablemass_bid.huidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SethuidNull() {
+                this[this.tablemass_bid.huidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IshgidNull() {
+                return this.IsNull(this.tablemass_bid.hgidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SethgidNull() {
+                this[this.tablemass_bid.hgidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IshdatetimeNull() {
+                return this.IsNull(this.tablemass_bid.hdatetimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SethdatetimeNull() {
+                this[this.tablemass_bid.hdatetimeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4626,38 +4651,27 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "mass_bid";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("stat", "stat");
-            tableMapping.ColumnMappings.Add("login", "login");
             tableMapping.ColumnMappings.Add("uid", "uid");
-            tableMapping.ColumnMappings.Add("who", "who");
-            tableMapping.ColumnMappings.Add("otdel", "otdel");
-            tableMapping.ColumnMappings.Add("wheen", "wheen");
             tableMapping.ColumnMappings.Add("date_time", "date_time");
-            tableMapping.ColumnMappings.Add("project_id", "project_id");
             tableMapping.ColumnMappings.Add("mass_project_id", "mass_project_id");
             tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("bid_name", "bid_name");
-            tableMapping.ColumnMappings.Add("is_sanction", "is_sanction");
             tableMapping.ColumnMappings.Add("claim", "claim");
             tableMapping.ColumnMappings.Add("version_by", "version_by");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMSdb"".""public"".""mass_bid"" WHERE ((""id"" = ?) AND (""stat"" = ?) AND (""login"" = ?) AND (""uid"" = ?) AND (""who"" = ?) AND (""otdel"" = ?) AND (""wheen"" = ?) AND (""date_time"" = ?) AND (""project_id"" = ?) AND (""mass_project_id"" = ?) AND (""description"" = ?) AND (""bid_name"" = ?) AND (""is_sanction"" = ?) AND (""claim"" = ?) AND ((? = 1 AND ""version_by"" IS NULL) OR (""version_by"" = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM \"DMSdb\".\"public\".\"mass_bid\" WHERE ((\"id\" = ?) AND (\"uid\" = ?) AND (\"d" +
+                "ate_time\" = ?) AND (\"mass_project_id\" = ?) AND (\"description\" = ?) AND (\"bid_nam" +
+                "e\" = ?) AND (\"claim\" = ?) AND ((? = 1 AND \"version_by\" IS NULL) OR (\"version_by\"" +
+                " = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_stat", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stat", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_login", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "login", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_uid", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uid", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_who", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "who", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_otdel", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "otdel", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_wheen", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "wheen", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_date_time", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "date_time", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_project_id", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_mass_project_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mass_project_id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_bid_name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_is_sanction", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "is_sanction", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_claim", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "claim", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_version_by", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version_by", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_version_by", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version_by", global::System.Data.DataRowVersion.Original, false, null));
@@ -4682,36 +4696,22 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("version_by", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version_by", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMSdb"".""public"".""mass_bid"" SET ""id"" = ?, ""stat"" = ?, ""login"" = ?, ""uid"" = ?, ""who"" = ?, ""otdel"" = ?, ""wheen"" = ?, ""date_time"" = ?, ""project_id"" = ?, ""mass_project_id"" = ?, ""description"" = ?, ""bid_name"" = ?, ""is_sanction"" = ?, ""claim"" = ?, ""version_by"" = ? WHERE ((""id"" = ?) AND (""stat"" = ?) AND (""login"" = ?) AND (""uid"" = ?) AND (""who"" = ?) AND (""otdel"" = ?) AND (""wheen"" = ?) AND (""date_time"" = ?) AND (""project_id"" = ?) AND (""mass_project_id"" = ?) AND (""description"" = ?) AND (""bid_name"" = ?) AND (""is_sanction"" = ?) AND (""claim"" = ?) AND ((? = 1 AND ""version_by"" IS NULL) OR (""version_by"" = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMSdb"".""public"".""mass_bid"" SET ""id"" = ?, ""uid"" = ?, ""date_time"" = ?, ""mass_project_id"" = ?, ""description"" = ?, ""bid_name"" = ?, ""claim"" = ?, ""version_by"" = ? WHERE ((""id"" = ?) AND (""uid"" = ?) AND (""date_time"" = ?) AND (""mass_project_id"" = ?) AND (""description"" = ?) AND (""bid_name"" = ?) AND (""claim"" = ?) AND ((? = 1 AND ""version_by"" IS NULL) OR (""version_by"" = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("stat", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stat", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("login", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "login", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("uid", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uid", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("who", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "who", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("otdel", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "otdel", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("wheen", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "wheen", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("date_time", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "date_time", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("project_id", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mass_project_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mass_project_id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("is_sanction", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "is_sanction", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("claim", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "claim", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("version_by", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version_by", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_stat", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stat", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_login", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "login", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_uid", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uid", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_who", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "who", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_otdel", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "otdel", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_wheen", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "wheen", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_date_time", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "date_time", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_project_id", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_mass_project_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mass_project_id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_bid_name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_is_sanction", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "is_sanction", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_claim", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "claim", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_version_by", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version_by", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_version_by", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version_by", global::System.Data.DataRowVersion.Original, false, null));
@@ -4727,13 +4727,28 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[4];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT \"id\", \"stat\", \"login\", \"uid\", \"who\", \"otdel\", \"wheen\", \"date_time\", \"proje" +
-                "ct_id\", \"mass_project_id\", \"description\", \"bid_name\", \"is_sanction\", \"claim\", \"v" +
-                "ersion_by\" FROM \"public\".\"mass_bid\"";
+            this._commandCollection[0].CommandText = "SELECT id, uid, date_time, mass_project_id, description, bid_name, claim, version" +
+                "_by FROM \"public\".mass_bid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "DELETE FROM mass_bid\r\nWHERE     (mass_bid.id = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id_to_delete", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT id, uid, date_time, mass_project_id, description, bid_name, claim, version" +
+                "_by FROM \"public\".mass_bid WHERE (mass_project_id = ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id_to_dearch", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mass_project_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT claim FROM \"public\".mass_bid WHERE (id = ?)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4755,6 +4770,32 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DMSdbDataSet.mass_bidDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DMSdbDataSet.mass_bidDataTable dataTable = new DMSdbDataSet.mass_bidDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillDataByProjectId(DMSdbDataSet.mass_bidDataTable dataTable, int id_to_dearch) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_to_dearch));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DMSdbDataSet.mass_bidDataTable GetDataByProjectId(int id_to_dearch) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_to_dearch));
             DMSdbDataSet.mass_bidDataTable dataTable = new DMSdbDataSet.mass_bidDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4793,68 +4834,31 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_stat, string Original_login, string Original_uid, string Original_who, string Original_otdel, string Original_wheen, System.DateTime Original_date_time, string Original_project_id, int Original_mass_project_id, string Original_description, string Original_bid_name, string Original_is_sanction, int Original_claim, int Original_version_by) {
+        public virtual int Delete(int Original_id, string Original_uid, System.DateTime Original_date_time, int Original_mass_project_id, string Original_description, string Original_bid_name, int Original_claim, int Original_version_by) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_stat));
-            if ((Original_login == null)) {
-                throw new global::System.ArgumentNullException("Original_login");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_login));
-            }
             if ((Original_uid == null)) {
                 throw new global::System.ArgumentNullException("Original_uid");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_uid));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_uid));
             }
-            if ((Original_who == null)) {
-                throw new global::System.ArgumentNullException("Original_who");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_who));
-            }
-            if ((Original_otdel == null)) {
-                throw new global::System.ArgumentNullException("Original_otdel");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_otdel));
-            }
-            if ((Original_wheen == null)) {
-                throw new global::System.ArgumentNullException("Original_wheen");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_wheen));
-            }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_date_time));
-            if ((Original_project_id == null)) {
-                throw new global::System.ArgumentNullException("Original_project_id");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_project_id));
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_mass_project_id));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_date_time));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_mass_project_id));
             if ((Original_description == null)) {
                 throw new global::System.ArgumentNullException("Original_description");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_description));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_description));
             }
             if ((Original_bid_name == null)) {
                 throw new global::System.ArgumentNullException("Original_bid_name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_bid_name));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_bid_name));
             }
-            if ((Original_is_sanction == null)) {
-                throw new global::System.ArgumentNullException("Original_is_sanction");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_is_sanction));
-            }
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_claim));
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_version_by));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_claim));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_version_by));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4958,156 +4962,68 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     int id, 
-                    int stat, 
-                    string login, 
                     string uid, 
-                    string who, 
-                    string otdel, 
-                    string wheen, 
                     System.DateTime date_time, 
-                    string project_id, 
                     int mass_project_id, 
                     string description, 
                     string bid_name, 
-                    string is_sanction, 
                     int claim, 
                     int version_by, 
                     int Original_id, 
-                    int Original_stat, 
-                    string Original_login, 
                     string Original_uid, 
-                    string Original_who, 
-                    string Original_otdel, 
-                    string Original_wheen, 
                     System.DateTime Original_date_time, 
-                    string Original_project_id, 
                     int Original_mass_project_id, 
                     string Original_description, 
                     string Original_bid_name, 
-                    string Original_is_sanction, 
                     int Original_claim, 
                     int Original_version_by) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(stat));
-            if ((login == null)) {
-                throw new global::System.ArgumentNullException("login");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(login));
-            }
             if ((uid == null)) {
                 throw new global::System.ArgumentNullException("uid");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(uid));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(uid));
             }
-            if ((who == null)) {
-                throw new global::System.ArgumentNullException("who");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(who));
-            }
-            if ((otdel == null)) {
-                throw new global::System.ArgumentNullException("otdel");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(otdel));
-            }
-            if ((wheen == null)) {
-                throw new global::System.ArgumentNullException("wheen");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(wheen));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(date_time));
-            if ((project_id == null)) {
-                throw new global::System.ArgumentNullException("project_id");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(project_id));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(mass_project_id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(date_time));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(mass_project_id));
             if ((description == null)) {
                 throw new global::System.ArgumentNullException("description");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(description));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(description));
             }
             if ((bid_name == null)) {
                 throw new global::System.ArgumentNullException("bid_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(bid_name));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(bid_name));
             }
-            if ((is_sanction == null)) {
-                throw new global::System.ArgumentNullException("is_sanction");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(is_sanction));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(claim));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(version_by));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_stat));
-            if ((Original_login == null)) {
-                throw new global::System.ArgumentNullException("Original_login");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_login));
-            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(claim));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(version_by));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id));
             if ((Original_uid == null)) {
                 throw new global::System.ArgumentNullException("Original_uid");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_uid));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_uid));
             }
-            if ((Original_who == null)) {
-                throw new global::System.ArgumentNullException("Original_who");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_who));
-            }
-            if ((Original_otdel == null)) {
-                throw new global::System.ArgumentNullException("Original_otdel");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_otdel));
-            }
-            if ((Original_wheen == null)) {
-                throw new global::System.ArgumentNullException("Original_wheen");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_wheen));
-            }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_date_time));
-            if ((Original_project_id == null)) {
-                throw new global::System.ArgumentNullException("Original_project_id");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_project_id));
-            }
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_mass_project_id));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_date_time));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_mass_project_id));
             if ((Original_description == null)) {
                 throw new global::System.ArgumentNullException("Original_description");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_description));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_description));
             }
             if ((Original_bid_name == null)) {
                 throw new global::System.ArgumentNullException("Original_bid_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_bid_name));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_bid_name));
             }
-            if ((Original_is_sanction == null)) {
-                throw new global::System.ArgumentNullException("Original_is_sanction");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_is_sanction));
-            }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_claim));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_version_by));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_claim));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_version_by));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5128,37 +5044,61 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int stat, 
-                    string login, 
-                    string uid, 
-                    string who, 
-                    string otdel, 
-                    string wheen, 
-                    System.DateTime date_time, 
-                    string project_id, 
-                    int mass_project_id, 
-                    string description, 
-                    string bid_name, 
-                    string is_sanction, 
-                    int claim, 
-                    int version_by, 
-                    int Original_id, 
-                    int Original_stat, 
-                    string Original_login, 
-                    string Original_uid, 
-                    string Original_who, 
-                    string Original_otdel, 
-                    string Original_wheen, 
-                    System.DateTime Original_date_time, 
-                    string Original_project_id, 
-                    int Original_mass_project_id, 
-                    string Original_description, 
-                    string Original_bid_name, 
-                    string Original_is_sanction, 
-                    int Original_claim, 
-                    int Original_version_by) {
-            return this.Update(Original_id, stat, login, uid, who, otdel, wheen, date_time, project_id, mass_project_id, description, bid_name, is_sanction, claim, version_by, Original_id, Original_stat, Original_login, Original_uid, Original_who, Original_otdel, Original_wheen, Original_date_time, Original_project_id, Original_mass_project_id, Original_description, Original_bid_name, Original_is_sanction, Original_claim, Original_version_by);
+        public virtual int Update(string uid, System.DateTime date_time, int mass_project_id, string description, string bid_name, int claim, int version_by, int Original_id, string Original_uid, System.DateTime Original_date_time, int Original_mass_project_id, string Original_description, string Original_bid_name, int Original_claim, int Original_version_by) {
+            return this.Update(Original_id, uid, date_time, mass_project_id, description, bid_name, claim, version_by, Original_id, Original_uid, Original_date_time, Original_mass_project_id, Original_description, Original_bid_name, Original_claim, Original_version_by);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteBidById(int id_to_delete) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(id_to_delete));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetBidClaim(int id) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
         }
     }
     
@@ -5367,12 +5307,18 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"id\", \"bid_id\", \"code\", \"name_code\", \"m\", \"x\", \"y\", \"z\", \"mx\", \"my\", \"mz\" " +
                 "FROM \"public\".\"mass_data_bid\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        id, bid_id, code, name_code, m, x, y, z\r\nFROM            \"public\".m" +
+                "ass_data_bid\r\nWHERE        (bid_id = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5394,6 +5340,32 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DMSdbDataSet.mass_data_bidDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBidData(DMSdbDataSet.mass_data_bidDataTable dataTable, int bid_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DMSdbDataSet.mass_data_bidDataTable GetBidData(int bid_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
             DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

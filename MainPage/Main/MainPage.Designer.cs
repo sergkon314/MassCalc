@@ -32,6 +32,7 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.page1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.page2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel = new System.Windows.Forms.Panel();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,21 +58,30 @@
             // page1ToolStripMenuItem
             // 
             this.page1ToolStripMenuItem.Name = "page1ToolStripMenuItem";
-            this.page1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.page1ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.page1ToolStripMenuItem.Text = "item1";
             this.page1ToolStripMenuItem.Click += new System.EventHandler(this.page1ToolStripMenuItem_Click);
             // 
             // page2ToolStripMenuItem
             // 
             this.page2ToolStripMenuItem.Name = "page2ToolStripMenuItem";
-            this.page2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.page2ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.page2ToolStripMenuItem.Text = "item2";
             this.page2ToolStripMenuItem.Click += new System.EventHandler(this.page2ToolStripMenuItem_Click);
+            // 
+            // panel
+            // 
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 24);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(978, 384);
+            this.panel.TabIndex = 2;
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.mainMenu);
             this.Name = "MainPage";
             this.Size = new System.Drawing.Size(978, 408);
@@ -88,6 +98,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem page1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem page2ToolStripMenuItem;
+        private System.Windows.Forms.Panel panel;
 
     }
 }

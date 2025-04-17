@@ -14,6 +14,7 @@ namespace dms.pages.Main
         public MainPage(Object o)
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void page1ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,11 +31,16 @@ namespace dms.pages.Main
         {
             switch (number) { 
                 case 1:
-                    BasePage P = new MassFilling();
-                    this.Controls.Add(P);
+                    BasePage P = new MassFilling(this, "test");
+                    P.Dock = DockStyle.Fill;
+                    P.LoadData();
+                    panel.Controls.Add(P);
                     break;
                 case 2:
-                    MessageBox.Show("Страница 2");
+                    BasePage P2 = new MassCalc();
+                    P2.Dock = DockStyle.Fill;
+                    P2.LoadData();
+                    panel.Controls.Add(P2);
                     break;
                 default:
                     break;

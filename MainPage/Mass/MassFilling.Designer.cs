@@ -117,8 +117,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.chkFilterCopy);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.cb_status);
@@ -169,7 +169,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lbl_num_projects);
             this.groupBox1.Controls.Add(this.chk_myprojects);
             this.groupBox1.Controls.Add(this.label19);
@@ -412,7 +412,7 @@
             // dg_data
             // 
             this.dg_data.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.dg_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_data.Location = new System.Drawing.Point(3, 16);
             this.dg_data.Name = "dg_data";
@@ -422,8 +422,8 @@
             // gb_fillBid
             // 
             this.gb_fillBid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_fillBid.Location = new System.Drawing.Point(1009, 10);
             this.gb_fillBid.Name = "gb_fillBid";
             this.gb_fillBid.Size = new System.Drawing.Size(264, 594);

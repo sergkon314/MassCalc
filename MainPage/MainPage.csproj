@@ -62,6 +62,10 @@
     <Compile Include="Mass\MassCalc.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Utils\DMSdbDataSet.cs">
+      <DependentUpon>DMSdbDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Utils\DMSdbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +96,9 @@
     <Compile Include="Utils\DmsTypes.cs" />
     <EmbeddedResource Include="Main\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\MassFilling.resx">
+      <DependentUpon>MassFilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

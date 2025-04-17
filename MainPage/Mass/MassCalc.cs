@@ -23,7 +23,7 @@ namespace dms.pages.Main
         private System.Windows.Forms.TextBox txt_pname;
         private System.Windows.Forms.Label label10;
 
-        //protected dmsMass.mass_stp_21DataTable dt_stp = new dmsMass.mass_stp_21DataTable();
+        protected DMSdbDataSet.mass_stp_21DataTable dt_stp = new DMSdbDataSet.mass_stp_21DataTable();
         //protected dmsMass.mass_data_bidDataTable dt_assembly;
         //protected dmsMassTableAdapters.mass_stp_21TableAdapter ta_stp = new dmsMassTableAdapters.mass_stp_21TableAdapter();
         private Button btn_report1;
