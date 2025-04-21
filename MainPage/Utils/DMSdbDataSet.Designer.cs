@@ -38,6 +38,8 @@ namespace dms.pages.Utils {
         
         private mass_text_codeDataTable tablemass_text_code;
         
+        private mass_variantsDataTable tablemass_variants;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -86,6 +88,9 @@ namespace dms.pages.Utils {
                 }
                 if ((ds.Tables["mass_text_code"] != null)) {
                     base.Tables.Add(new mass_text_codeDataTable(ds.Tables["mass_text_code"]));
+                }
+                if ((ds.Tables["mass_variants"] != null)) {
+                    base.Tables.Add(new mass_variantsDataTable(ds.Tables["mass_variants"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,6 +182,16 @@ namespace dms.pages.Utils {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public mass_variantsDataTable mass_variants {
+            get {
+                return this.tablemass_variants;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -263,6 +278,9 @@ namespace dms.pages.Utils {
                 if ((ds.Tables["mass_text_code"] != null)) {
                     base.Tables.Add(new mass_text_codeDataTable(ds.Tables["mass_text_code"]));
                 }
+                if ((ds.Tables["mass_variants"] != null)) {
+                    base.Tables.Add(new mass_variantsDataTable(ds.Tables["mass_variants"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -338,6 +356,12 @@ namespace dms.pages.Utils {
                     this.tablemass_text_code.InitVars();
                 }
             }
+            this.tablemass_variants = ((mass_variantsDataTable)(base.Tables["mass_variants"]));
+            if ((initTable == true)) {
+                if ((this.tablemass_variants != null)) {
+                    this.tablemass_variants.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,6 +386,8 @@ namespace dms.pages.Utils {
             base.Tables.Add(this.tablemass_stp_21);
             this.tablemass_text_code = new mass_text_codeDataTable();
             base.Tables.Add(this.tablemass_text_code);
+            this.tablemass_variants = new mass_variantsDataTable();
+            base.Tables.Add(this.tablemass_variants);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,6 +429,12 @@ namespace dms.pages.Utils {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializemass_text_code() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializemass_variants() {
             return false;
         }
         
@@ -481,6 +513,9 @@ namespace dms.pages.Utils {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void mass_text_codeRowChangeEventHandler(object sender, mass_text_codeRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void mass_variantsRowChangeEventHandler(object sender, mass_variantsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3277,6 +3312,602 @@ namespace dms.pages.Utils {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class mass_variantsDataTable : global::System.Data.TypedTableBase<mass_variantsRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columncode;
+            
+            private global::System.Data.DataColumn column_01;
+            
+            private global::System.Data.DataColumn column_02;
+            
+            private global::System.Data.DataColumn column_03;
+            
+            private global::System.Data.DataColumn column_04;
+            
+            private global::System.Data.DataColumn column_05;
+            
+            private global::System.Data.DataColumn column_06;
+            
+            private global::System.Data.DataColumn column_07;
+            
+            private global::System.Data.DataColumn column_08;
+            
+            private global::System.Data.DataColumn column_09;
+            
+            private global::System.Data.DataColumn column_10;
+            
+            private global::System.Data.DataColumn column_11;
+            
+            private global::System.Data.DataColumn column_12;
+            
+            private global::System.Data.DataColumn column_13;
+            
+            private global::System.Data.DataColumn column_14;
+            
+            private global::System.Data.DataColumn column_15;
+            
+            private global::System.Data.DataColumn column_16;
+            
+            private global::System.Data.DataColumn column_17;
+            
+            private global::System.Data.DataColumn column_18;
+            
+            private global::System.Data.DataColumn columnfor10;
+            
+            private global::System.Data.DataColumn columnfor50;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsDataTable() {
+                this.TableName = "mass_variants";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal mass_variantsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected mass_variantsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn codeColumn {
+                get {
+                    return this.columncode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _01Column {
+                get {
+                    return this.column_01;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _02Column {
+                get {
+                    return this.column_02;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _03Column {
+                get {
+                    return this.column_03;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _04Column {
+                get {
+                    return this.column_04;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _05Column {
+                get {
+                    return this.column_05;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _06Column {
+                get {
+                    return this.column_06;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _07Column {
+                get {
+                    return this.column_07;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _08Column {
+                get {
+                    return this.column_08;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _09Column {
+                get {
+                    return this.column_09;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _10Column {
+                get {
+                    return this.column_10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _11Column {
+                get {
+                    return this.column_11;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _12Column {
+                get {
+                    return this.column_12;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _13Column {
+                get {
+                    return this.column_13;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _14Column {
+                get {
+                    return this.column_14;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _15Column {
+                get {
+                    return this.column_15;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _16Column {
+                get {
+                    return this.column_16;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _17Column {
+                get {
+                    return this.column_17;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _18Column {
+                get {
+                    return this.column_18;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn for10Column {
+                get {
+                    return this.columnfor10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn for50Column {
+                get {
+                    return this.columnfor50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsRow this[int index] {
+                get {
+                    return ((mass_variantsRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event mass_variantsRowChangeEventHandler mass_variantsRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event mass_variantsRowChangeEventHandler mass_variantsRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event mass_variantsRowChangeEventHandler mass_variantsRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event mass_variantsRowChangeEventHandler mass_variantsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addmass_variantsRow(mass_variantsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsRow Addmass_variantsRow(
+                        int id, 
+                        string code, 
+                        decimal _01, 
+                        decimal _02, 
+                        decimal _03, 
+                        decimal _04, 
+                        decimal _05, 
+                        decimal _06, 
+                        decimal _07, 
+                        decimal _08, 
+                        decimal _09, 
+                        decimal _10, 
+                        decimal _11, 
+                        decimal _12, 
+                        decimal _13, 
+                        decimal _14, 
+                        decimal _15, 
+                        decimal _16, 
+                        decimal _17, 
+                        decimal _18, 
+                        int for10, 
+                        int for50) {
+                mass_variantsRow rowmass_variantsRow = ((mass_variantsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        code,
+                        _01,
+                        _02,
+                        _03,
+                        _04,
+                        _05,
+                        _06,
+                        _07,
+                        _08,
+                        _09,
+                        _10,
+                        _11,
+                        _12,
+                        _13,
+                        _14,
+                        _15,
+                        _16,
+                        _17,
+                        _18,
+                        for10,
+                        for50};
+                rowmass_variantsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowmass_variantsRow);
+                return rowmass_variantsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsRow FindByid(int id) {
+                return ((mass_variantsRow)(this.Rows.Find(new object[] {
+                            id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                mass_variantsDataTable cln = ((mass_variantsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new mass_variantsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columncode = base.Columns["code"];
+                this.column_01 = base.Columns["_01"];
+                this.column_02 = base.Columns["_02"];
+                this.column_03 = base.Columns["_03"];
+                this.column_04 = base.Columns["_04"];
+                this.column_05 = base.Columns["_05"];
+                this.column_06 = base.Columns["_06"];
+                this.column_07 = base.Columns["_07"];
+                this.column_08 = base.Columns["_08"];
+                this.column_09 = base.Columns["_09"];
+                this.column_10 = base.Columns["_10"];
+                this.column_11 = base.Columns["_11"];
+                this.column_12 = base.Columns["_12"];
+                this.column_13 = base.Columns["_13"];
+                this.column_14 = base.Columns["_14"];
+                this.column_15 = base.Columns["_15"];
+                this.column_16 = base.Columns["_16"];
+                this.column_17 = base.Columns["_17"];
+                this.column_18 = base.Columns["_18"];
+                this.columnfor10 = base.Columns["for10"];
+                this.columnfor50 = base.Columns["for50"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columncode = new global::System.Data.DataColumn("code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncode);
+                this.column_01 = new global::System.Data.DataColumn("_01", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_01);
+                this.column_02 = new global::System.Data.DataColumn("_02", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_02);
+                this.column_03 = new global::System.Data.DataColumn("_03", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_03);
+                this.column_04 = new global::System.Data.DataColumn("_04", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_04);
+                this.column_05 = new global::System.Data.DataColumn("_05", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_05);
+                this.column_06 = new global::System.Data.DataColumn("_06", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_06);
+                this.column_07 = new global::System.Data.DataColumn("_07", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_07);
+                this.column_08 = new global::System.Data.DataColumn("_08", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_08);
+                this.column_09 = new global::System.Data.DataColumn("_09", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_09);
+                this.column_10 = new global::System.Data.DataColumn("_10", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_10);
+                this.column_11 = new global::System.Data.DataColumn("_11", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_11);
+                this.column_12 = new global::System.Data.DataColumn("_12", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_12);
+                this.column_13 = new global::System.Data.DataColumn("_13", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_13);
+                this.column_14 = new global::System.Data.DataColumn("_14", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_14);
+                this.column_15 = new global::System.Data.DataColumn("_15", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_15);
+                this.column_16 = new global::System.Data.DataColumn("_16", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_16);
+                this.column_17 = new global::System.Data.DataColumn("_17", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_17);
+                this.column_18 = new global::System.Data.DataColumn("_18", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column_18);
+                this.columnfor10 = new global::System.Data.DataColumn("for10", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfor10);
+                this.columnfor50 = new global::System.Data.DataColumn("for50", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfor50);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
+                this.columncode.AllowDBNull = false;
+                this.columncode.MaxLength = 8;
+                this.column_01.AllowDBNull = false;
+                this.column_02.AllowDBNull = false;
+                this.column_03.AllowDBNull = false;
+                this.column_04.AllowDBNull = false;
+                this.column_05.AllowDBNull = false;
+                this.column_06.AllowDBNull = false;
+                this.column_07.AllowDBNull = false;
+                this.column_08.AllowDBNull = false;
+                this.column_09.AllowDBNull = false;
+                this.column_10.AllowDBNull = false;
+                this.column_11.AllowDBNull = false;
+                this.column_12.AllowDBNull = false;
+                this.column_13.AllowDBNull = false;
+                this.column_14.AllowDBNull = false;
+                this.column_15.AllowDBNull = false;
+                this.column_16.AllowDBNull = false;
+                this.column_17.AllowDBNull = false;
+                this.column_18.AllowDBNull = false;
+                this.columnfor10.AllowDBNull = false;
+                this.columnfor50.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsRow Newmass_variantsRow() {
+                return ((mass_variantsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new mass_variantsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(mass_variantsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.mass_variantsRowChanged != null)) {
+                    this.mass_variantsRowChanged(this, new mass_variantsRowChangeEvent(((mass_variantsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.mass_variantsRowChanging != null)) {
+                    this.mass_variantsRowChanging(this, new mass_variantsRowChangeEvent(((mass_variantsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.mass_variantsRowDeleted != null)) {
+                    this.mass_variantsRowDeleted(this, new mass_variantsRowChangeEvent(((mass_variantsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.mass_variantsRowDeleting != null)) {
+                    this.mass_variantsRowDeleting(this, new mass_variantsRowChangeEvent(((mass_variantsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removemass_variantsRow(mass_variantsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DMSdbDataSet ds = new DMSdbDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "mass_variantsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class mass_bidRow : global::System.Data.DataRow {
@@ -4288,6 +4919,263 @@ namespace dms.pages.Utils {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class mass_variantsRow : global::System.Data.DataRow {
+            
+            private mass_variantsDataTable tablemass_variants;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal mass_variantsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablemass_variants = ((mass_variantsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tablemass_variants.idColumn]));
+                }
+                set {
+                    this[this.tablemass_variants.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string code {
+                get {
+                    return ((string)(this[this.tablemass_variants.codeColumn]));
+                }
+                set {
+                    this[this.tablemass_variants.codeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _01 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._01Column]));
+                }
+                set {
+                    this[this.tablemass_variants._01Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _02 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._02Column]));
+                }
+                set {
+                    this[this.tablemass_variants._02Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _03 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._03Column]));
+                }
+                set {
+                    this[this.tablemass_variants._03Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _04 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._04Column]));
+                }
+                set {
+                    this[this.tablemass_variants._04Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _05 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._05Column]));
+                }
+                set {
+                    this[this.tablemass_variants._05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _06 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._06Column]));
+                }
+                set {
+                    this[this.tablemass_variants._06Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _07 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._07Column]));
+                }
+                set {
+                    this[this.tablemass_variants._07Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _08 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._08Column]));
+                }
+                set {
+                    this[this.tablemass_variants._08Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _09 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._09Column]));
+                }
+                set {
+                    this[this.tablemass_variants._09Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _10 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._10Column]));
+                }
+                set {
+                    this[this.tablemass_variants._10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _11 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._11Column]));
+                }
+                set {
+                    this[this.tablemass_variants._11Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _12 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._12Column]));
+                }
+                set {
+                    this[this.tablemass_variants._12Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _13 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._13Column]));
+                }
+                set {
+                    this[this.tablemass_variants._13Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _14 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._14Column]));
+                }
+                set {
+                    this[this.tablemass_variants._14Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _15 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._15Column]));
+                }
+                set {
+                    this[this.tablemass_variants._15Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _16 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._16Column]));
+                }
+                set {
+                    this[this.tablemass_variants._16Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _17 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._17Column]));
+                }
+                set {
+                    this[this.tablemass_variants._17Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal _18 {
+                get {
+                    return ((decimal)(this[this.tablemass_variants._18Column]));
+                }
+                set {
+                    this[this.tablemass_variants._18Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int for10 {
+                get {
+                    return ((int)(this[this.tablemass_variants.for10Column]));
+                }
+                set {
+                    this[this.tablemass_variants.for10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int for50 {
+                get {
+                    return ((int)(this[this.tablemass_variants.for50Column]));
+                }
+                set {
+                    this[this.tablemass_variants.for50Column] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4524,6 +5412,40 @@ namespace dms.pages.Utils {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class mass_variantsRowChangeEvent : global::System.EventArgs {
+            
+            private mass_variantsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsRowChangeEvent(mass_variantsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public mass_variantsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
@@ -4727,7 +5649,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[5];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[6];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, uid, date_time, mass_project_id, description, bid_name, claim, version" +
@@ -4751,11 +5673,19 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE    mass_bid SET    bid_name = ?,  description = ? WHERE     (id = ?)";
+            this._commandCollection[4].CommandText = "INSERT INTO \"DMSdb\".\"public\".\"mass_bid\" (\"uid\", \"date_time\", \"mass_project_id\") V" +
+                "ALUES (?, ?, ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_name", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_name", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("description", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("uid", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uid", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("date_time", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "date_time", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mass_project_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mass_project_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "UPDATE    mass_bid SET    bid_name = ?,  description = ? WHERE     (id = ?)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_name", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_name", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("description", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5111,9 +6041,40 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int Insert1(string uid, System.DateTime date_time, int mass_project_id) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[4];
+            if ((uid == null)) {
+                throw new global::System.ArgumentNullException("uid");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(uid));
+            }
+            command.Parameters[1].Value = ((System.DateTime)(date_time));
+            command.Parameters[2].Value = ((int)(mass_project_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateBidItem(string bid_name, string description, int Original_id) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[4];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[5];
             if ((bid_name == null)) {
                 throw new global::System.ArgumentNullException("bid_name");
             }
@@ -5350,7 +6311,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[3];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[8];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"id\", \"bid_id\", \"code\", \"name_code\", \"m\", \"x\", \"y\", \"z\", \"mx\", \"my\", \"mz\" " +
@@ -5358,22 +6319,58 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        id, bid_id, code, name_code, m, x, y, z\r\nFROM            \"public\".m" +
-                "ass_data_bid\r\nWHERE        (bid_id = ?)";
+            this._commandCollection[1].CommandText = "DELETE FROM mass_data_bid WHERE (bid_id = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE    mass_data_bid SET code = ?, name_code = ?, m = ?, x = ?, y = ?, z = ? W" +
-                "HERE (id = ?)";
+            this._commandCollection[2].CommandText = "DELETE FROM mass_data_bid WHERE (id = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        id, bid_id, code, name_code, m, x, y, z\r\nFROM            \"public\".m" +
+                "ass_data_bid\r\nWHERE        (bid_id = ?)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT \"id\", \"bid_id\", \"code\", \"name_code\", \"m\", \"x\", \"y\", \"z\", \"mx\", \"my\", \"mz\" " +
+                "FROM \"public\".\"mass_data_bid\" where bid_id = ?";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "INSERT INTO \"DMSdb\".\"public\".\"mass_data_bid\" (\"bid_id\", \"code\", \"name_code\") VALU" +
+                "ES (?, ?, ?)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "INSERT INTO mass_data_bid (bid_id, code, name_code, m, x, y, z) VALUES (?, ?, ?, " +
+                "?, ?, ?, ?)";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "UPDATE    mass_data_bid SET code = ?, name_code = ?, m = ?, x = ?, y = ?, z = ? W" +
+                "HERE (id = ?)";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5405,7 +6402,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBidData(DMSdbDataSet.mass_data_bidDataTable dataTable, int bid_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5419,7 +6416,19 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DMSdbDataSet.mass_data_bidDataTable GetBidData(int bid_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
+            DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DMSdbDataSet.mass_data_bidDataTable GetDataForCopy(int bid_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
             DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
             this.Adapter.Fill(dataTable);
@@ -5656,9 +6665,133 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteBidData(int bid_id) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(bid_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteBidItemData(int id) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int Insert1(int bid_id, string code, string name_code) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[5];
+            command.Parameters[0].Value = ((int)(bid_id));
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(code));
+            }
+            if ((name_code == null)) {
+                throw new global::System.ArgumentNullException("name_code");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(name_code));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertItemCopy(int bid_id, string code, string name_code, decimal m, decimal x, decimal y, decimal z) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[6];
+            command.Parameters[0].Value = ((int)(bid_id));
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(code));
+            }
+            if ((name_code == null)) {
+                throw new global::System.ArgumentNullException("name_code");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(name_code));
+            }
+            command.Parameters[3].Value = ((decimal)(m));
+            command.Parameters[4].Value = ((decimal)(x));
+            command.Parameters[5].Value = ((decimal)(y));
+            command.Parameters[6].Value = ((decimal)(z));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateBidItem(string code, string name_code, decimal m, decimal x, decimal y, decimal z, int Original_id) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[2];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[7];
             if ((code == null)) {
                 throw new global::System.ArgumentNullException("code");
             }
@@ -6781,13 +7914,19 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"id\", \"name\", \"type\", \"prototype\", \"description\", \"shiptype\", \"mute\", \"mas" +
                 "ter\", \"project_group\", \"num_type1\", \"num_type2\", \"deleted\", \"Lgb\", \"Bgb\", \"Hgb\"," +
                 " \"custom_stp_m\", \"custom_stp_z\", \"custom_stp\" FROM \"public\".\"mass_project\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        id, name, type, prototype, description, master, project_group, num_" +
+                "type1, num_type2, deleted, \"Bgb\", \"Hgb\", \"Lgb\", custom_stp, custom_stp_m, custom" +
+                "_stp_z \r\nFROM mass_project ORDER BY name";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6812,6 +7951,19 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             DMSdbDataSet.mass_projectDataTable dataTable = new DMSdbDataSet.mass_projectDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillAll(DMSdbDataSet.mass_projectDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8118,6 +9270,635 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class mass_variantsTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.Odbc.OdbcDataAdapter _adapter;
+        
+        private global::System.Data.Odbc.OdbcConnection _connection;
+        
+        private global::System.Data.Odbc.OdbcTransaction _transaction;
+        
+        private global::System.Data.Odbc.OdbcCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public mass_variantsTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.Odbc.OdbcDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.Odbc.OdbcConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.Odbc.OdbcCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.Odbc.OdbcTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.Odbc.OdbcCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "mass_variants";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("code", "code");
+            tableMapping.ColumnMappings.Add("_01", "_01");
+            tableMapping.ColumnMappings.Add("_02", "_02");
+            tableMapping.ColumnMappings.Add("_03", "_03");
+            tableMapping.ColumnMappings.Add("_04", "_04");
+            tableMapping.ColumnMappings.Add("_05", "_05");
+            tableMapping.ColumnMappings.Add("_06", "_06");
+            tableMapping.ColumnMappings.Add("_07", "_07");
+            tableMapping.ColumnMappings.Add("_08", "_08");
+            tableMapping.ColumnMappings.Add("_09", "_09");
+            tableMapping.ColumnMappings.Add("_10", "_10");
+            tableMapping.ColumnMappings.Add("_11", "_11");
+            tableMapping.ColumnMappings.Add("_12", "_12");
+            tableMapping.ColumnMappings.Add("_13", "_13");
+            tableMapping.ColumnMappings.Add("_14", "_14");
+            tableMapping.ColumnMappings.Add("_15", "_15");
+            tableMapping.ColumnMappings.Add("_16", "_16");
+            tableMapping.ColumnMappings.Add("_17", "_17");
+            tableMapping.ColumnMappings.Add("_18", "_18");
+            tableMapping.ColumnMappings.Add("for10", "for10");
+            tableMapping.ColumnMappings.Add("for50", "for50");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMSdb"".""public"".""mass_variants"" WHERE ((""id"" = ?) AND (""code"" = ?) AND (""_01"" = ?) AND (""_02"" = ?) AND (""_03"" = ?) AND (""_04"" = ?) AND (""_05"" = ?) AND (""_06"" = ?) AND (""_07"" = ?) AND (""_08"" = ?) AND (""_09"" = ?) AND (""_10"" = ?) AND (""_11"" = ?) AND (""_12"" = ?) AND (""_13"" = ?) AND (""_14"" = ?) AND (""_15"" = ?) AND (""_16"" = ?) AND (""_17"" = ?) AND (""_18"" = ?) AND (""for10"" = ?) AND (""for50"" = ?))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_code", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__01", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_01", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__02", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_02", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__03", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_03", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__04", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_04", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__05", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_05", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__06", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_06", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__07", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_07", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__08", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_08", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__09", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_09", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__10", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_10", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__11", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_11", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__12", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_12", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__13", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_13", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__14", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_14", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__15", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_15", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__16", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_16", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__17", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_17", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__18", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_18", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_for10", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for10", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_for50", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for50", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""DMSdb"".""public"".""mass_variants"" (""id"", ""code"", ""_01"", ""_02"", ""_03"", ""_04"", ""_05"", ""_06"", ""_07"", ""_08"", ""_09"", ""_10"", ""_11"", ""_12"", ""_13"", ""_14"", ""_15"", ""_16"", ""_17"", ""_18"", ""for10"", ""for50"") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_01", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_01", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_02", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_02", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_03", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_03", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_04", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_04", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_05", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_05", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_06", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_06", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_07", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_07", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_08", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_08", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_09", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_09", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_10", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_10", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_11", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_11", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_12", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_12", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_13", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_13", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_14", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_14", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_15", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_15", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_16", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_16", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_17", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_17", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_18", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_18", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("for10", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for10", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("for50", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for50", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMSdb"".""public"".""mass_variants"" SET ""id"" = ?, ""code"" = ?, ""_01"" = ?, ""_02"" = ?, ""_03"" = ?, ""_04"" = ?, ""_05"" = ?, ""_06"" = ?, ""_07"" = ?, ""_08"" = ?, ""_09"" = ?, ""_10"" = ?, ""_11"" = ?, ""_12"" = ?, ""_13"" = ?, ""_14"" = ?, ""_15"" = ?, ""_16"" = ?, ""_17"" = ?, ""_18"" = ?, ""for10"" = ?, ""for50"" = ? WHERE ((""id"" = ?) AND (""code"" = ?) AND (""_01"" = ?) AND (""_02"" = ?) AND (""_03"" = ?) AND (""_04"" = ?) AND (""_05"" = ?) AND (""_06"" = ?) AND (""_07"" = ?) AND (""_08"" = ?) AND (""_09"" = ?) AND (""_10"" = ?) AND (""_11"" = ?) AND (""_12"" = ?) AND (""_13"" = ?) AND (""_14"" = ?) AND (""_15"" = ?) AND (""_16"" = ?) AND (""_17"" = ?) AND (""_18"" = ?) AND (""for10"" = ?) AND (""for50"" = ?))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_01", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_01", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_02", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_02", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_03", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_03", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_04", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_04", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_05", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_05", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_06", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_06", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_07", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_07", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_08", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_08", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_09", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_09", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_10", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_10", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_11", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_11", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_12", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_12", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_13", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_13", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_14", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_14", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_15", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_15", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_16", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_16", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_17", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_17", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("_18", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_18", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("for10", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for10", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("for50", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for50", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_code", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__01", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_01", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__02", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_02", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__03", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_03", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__04", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_04", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__05", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_05", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__06", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_06", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__07", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_07", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__08", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_08", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__09", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_09", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__10", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_10", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__11", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_11", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__12", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_12", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__13", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_13", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__14", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_14", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__15", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_15", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__16", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_16", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__17", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_17", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original__18", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(28)), ((byte)(6)), "_18", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_for10", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for10", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_for50", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "for50", global::System.Data.DataRowVersion.Original, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.Odbc.OdbcConnection();
+            this._connection.ConnectionString = global::dms.pages.Properties.Settings.Default.DMSdbConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT \"id\", \"code\", \"_01\", \"_02\", \"_03\", \"_04\", \"_05\", \"_06\", \"_07\", \"_08\", \"_09" +
+                "\", \"_10\", \"_11\", \"_12\", \"_13\", \"_14\", \"_15\", \"_16\", \"_17\", \"_18\", \"for10\", \"for5" +
+                "0\" FROM \"public\".\"mass_variants\"";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DMSdbDataSet.mass_variantsDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DMSdbDataSet.mass_variantsDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DMSdbDataSet.mass_variantsDataTable dataTable = new DMSdbDataSet.mass_variantsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DMSdbDataSet.mass_variantsDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DMSdbDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "mass_variants");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_id, 
+                    string Original_code, 
+                    decimal Original__01, 
+                    decimal Original__02, 
+                    decimal Original__03, 
+                    decimal Original__04, 
+                    decimal Original__05, 
+                    decimal Original__06, 
+                    decimal Original__07, 
+                    decimal Original__08, 
+                    decimal Original__09, 
+                    decimal Original__10, 
+                    decimal Original__11, 
+                    decimal Original__12, 
+                    decimal Original__13, 
+                    decimal Original__14, 
+                    decimal Original__15, 
+                    decimal Original__16, 
+                    decimal Original__17, 
+                    decimal Original__18, 
+                    int Original_for10, 
+                    int Original_for50) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_code == null)) {
+                throw new global::System.ArgumentNullException("Original_code");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_code));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original__01));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original__02));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original__03));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original__04));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original__05));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original__06));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original__07));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original__08));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original__09));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original__10));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original__11));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((decimal)(Original__12));
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original__13));
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((decimal)(Original__14));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((decimal)(Original__15));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original__16));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((decimal)(Original__17));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((decimal)(Original__18));
+            this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_for10));
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_for50));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    int id, 
+                    string code, 
+                    decimal _01, 
+                    decimal _02, 
+                    decimal _03, 
+                    decimal _04, 
+                    decimal _05, 
+                    decimal _06, 
+                    decimal _07, 
+                    decimal _08, 
+                    decimal _09, 
+                    decimal _10, 
+                    decimal _11, 
+                    decimal _12, 
+                    decimal _13, 
+                    decimal _14, 
+                    decimal _15, 
+                    decimal _16, 
+                    decimal _17, 
+                    decimal _18, 
+                    int for10, 
+                    int for50) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(code));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(_01));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(_02));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(_03));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(_04));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(_05));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(_06));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(_07));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(_08));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(_09));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(_10));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(_11));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(_12));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((decimal)(_13));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((decimal)(_14));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((decimal)(_15));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((decimal)(_16));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((decimal)(_17));
+            this.Adapter.InsertCommand.Parameters[19].Value = ((decimal)(_18));
+            this.Adapter.InsertCommand.Parameters[20].Value = ((int)(for10));
+            this.Adapter.InsertCommand.Parameters[21].Value = ((int)(for50));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int id, 
+                    string code, 
+                    decimal _01, 
+                    decimal _02, 
+                    decimal _03, 
+                    decimal _04, 
+                    decimal _05, 
+                    decimal _06, 
+                    decimal _07, 
+                    decimal _08, 
+                    decimal _09, 
+                    decimal _10, 
+                    decimal _11, 
+                    decimal _12, 
+                    decimal _13, 
+                    decimal _14, 
+                    decimal _15, 
+                    decimal _16, 
+                    decimal _17, 
+                    decimal _18, 
+                    int for10, 
+                    int for50, 
+                    int Original_id, 
+                    string Original_code, 
+                    decimal Original__01, 
+                    decimal Original__02, 
+                    decimal Original__03, 
+                    decimal Original__04, 
+                    decimal Original__05, 
+                    decimal Original__06, 
+                    decimal Original__07, 
+                    decimal Original__08, 
+                    decimal Original__09, 
+                    decimal Original__10, 
+                    decimal Original__11, 
+                    decimal Original__12, 
+                    decimal Original__13, 
+                    decimal Original__14, 
+                    decimal Original__15, 
+                    decimal Original__16, 
+                    decimal Original__17, 
+                    decimal Original__18, 
+                    int Original_for10, 
+                    int Original_for50) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(code));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(_01));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(_02));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(_03));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(_04));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(_05));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(_06));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(_07));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(_08));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(_09));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(_10));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(_11));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(_12));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(_13));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(_14));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(_15));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(_16));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(_17));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(_18));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(for10));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(for50));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_id));
+            if ((Original_code == null)) {
+                throw new global::System.ArgumentNullException("Original_code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_code));
+            }
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original__01));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Original__02));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(Original__03));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original__04));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(Original__05));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original__06));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original__07));
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(Original__08));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original__09));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(Original__10));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original__11));
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(Original__12));
+            this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(Original__13));
+            this.Adapter.UpdateCommand.Parameters[37].Value = ((decimal)(Original__14));
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(Original__15));
+            this.Adapter.UpdateCommand.Parameters[39].Value = ((decimal)(Original__16));
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((decimal)(Original__17));
+            this.Adapter.UpdateCommand.Parameters[41].Value = ((decimal)(Original__18));
+            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_for10));
+            this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_for50));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string code, 
+                    decimal _01, 
+                    decimal _02, 
+                    decimal _03, 
+                    decimal _04, 
+                    decimal _05, 
+                    decimal _06, 
+                    decimal _07, 
+                    decimal _08, 
+                    decimal _09, 
+                    decimal _10, 
+                    decimal _11, 
+                    decimal _12, 
+                    decimal _13, 
+                    decimal _14, 
+                    decimal _15, 
+                    decimal _16, 
+                    decimal _17, 
+                    decimal _18, 
+                    int for10, 
+                    int for50, 
+                    int Original_id, 
+                    string Original_code, 
+                    decimal Original__01, 
+                    decimal Original__02, 
+                    decimal Original__03, 
+                    decimal Original__04, 
+                    decimal Original__05, 
+                    decimal Original__06, 
+                    decimal Original__07, 
+                    decimal Original__08, 
+                    decimal Original__09, 
+                    decimal Original__10, 
+                    decimal Original__11, 
+                    decimal Original__12, 
+                    decimal Original__13, 
+                    decimal Original__14, 
+                    decimal Original__15, 
+                    decimal Original__16, 
+                    decimal Original__17, 
+                    decimal Original__18, 
+                    int Original_for10, 
+                    int Original_for50) {
+            return this.Update(Original_id, code, _01, _02, _03, _04, _05, _06, _07, _08, _09, _10, _11, _12, _13, _14, _15, _16, _17, _18, for10, for50, Original_id, Original_code, Original__01, Original__02, Original__03, Original__04, Original__05, Original__06, Original__07, Original__08, Original__09, Original__10, Original__11, Original__12, Original__13, Original__14, Original__15, Original__16, Original__17, Original__18, Original_for10, Original_for50);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8142,6 +9923,8 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         private mass_stp_21TableAdapter _mass_stp_21TableAdapter;
         
         private mass_text_codeTableAdapter _mass_text_codeTableAdapter;
+        
+        private mass_variantsTableAdapter _mass_variantsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -8258,6 +10041,20 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public mass_variantsTableAdapter mass_variantsTableAdapter {
+            get {
+                return this._mass_variantsTableAdapter;
+            }
+            set {
+                this._mass_variantsTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -8303,6 +10100,10 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                             && (this._mass_text_codeTableAdapter.Connection != null))) {
                     return this._mass_text_codeTableAdapter.Connection;
                 }
+                if (((this._mass_variantsTableAdapter != null) 
+                            && (this._mass_variantsTableAdapter.Connection != null))) {
+                    return this._mass_variantsTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -8337,6 +10138,9 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                 if ((this._mass_text_codeTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._mass_variantsTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -8348,6 +10152,15 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(DMSdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._mass_stp_21TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._mass_stp_21TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._mass_projectTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.mass_project.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -8357,12 +10170,12 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._mass_stp_21TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._mass_variantsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.mass_variants.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._mass_stp_21TableAdapter.Update(updatedRows));
+                    result = (result + this._mass_variantsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8375,12 +10188,12 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._mass_main_tabTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.mass_main_tab.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._mass_data_bidTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.mass_data_bid.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._mass_main_tabTableAdapter.Update(updatedRows));
+                    result = (result + this._mass_data_bidTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8393,12 +10206,12 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._mass_data_bidTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.mass_data_bid.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._mass_main_tabTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.mass_main_tab.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._mass_data_bidTableAdapter.Update(updatedRows));
+                    result = (result + this._mass_main_tabTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8421,6 +10234,14 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(DMSdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._mass_stp_21TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._mass_stp_21TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._mass_projectTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.mass_project.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -8429,11 +10250,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._mass_stp_21TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._mass_variantsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.mass_variants.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._mass_stp_21TableAdapter.Update(addedRows));
+                    result = (result + this._mass_variantsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8445,11 +10266,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._mass_main_tabTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.mass_main_tab.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._mass_data_bidTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.mass_data_bid.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._mass_main_tabTableAdapter.Update(addedRows));
+                    result = (result + this._mass_data_bidTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8461,11 +10282,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._mass_data_bidTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.mass_data_bid.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._mass_main_tabTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.mass_main_tab.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._mass_data_bidTableAdapter.Update(addedRows));
+                    result = (result + this._mass_main_tabTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8495,11 +10316,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._mass_data_bidTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.mass_data_bid.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._mass_main_tabTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.mass_main_tab.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._mass_data_bidTableAdapter.Update(deletedRows));
+                    result = (result + this._mass_main_tabTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8511,11 +10332,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._mass_main_tabTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.mass_main_tab.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._mass_data_bidTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.mass_data_bid.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._mass_main_tabTableAdapter.Update(deletedRows));
+                    result = (result + this._mass_data_bidTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8527,11 +10348,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._mass_stp_21TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._mass_variantsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.mass_variants.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._mass_stp_21TableAdapter.Update(deletedRows));
+                    result = (result + this._mass_variantsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8540,6 +10361,14 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._mass_projectTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._mass_stp_21TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._mass_stp_21TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8614,6 +10443,11 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             }
             if (((this._mass_text_codeTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._mass_text_codeTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
+                        "r, должны использовать одинаковую строку подключения.");
+            }
+            if (((this._mass_variantsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._mass_variantsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -8712,6 +10546,15 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._mass_text_codeTableAdapter.Adapter);
                     }
                 }
+                if ((this._mass_variantsTableAdapter != null)) {
+                    revertConnections.Add(this._mass_variantsTableAdapter, this._mass_variantsTableAdapter.Connection);
+                    this._mass_variantsTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
+                    this._mass_variantsTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
+                    if (this._mass_variantsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._mass_variantsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._mass_variantsTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -8797,6 +10640,10 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                 if ((this._mass_text_codeTableAdapter != null)) {
                     this._mass_text_codeTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._mass_text_codeTableAdapter]));
                     this._mass_text_codeTableAdapter.Transaction = null;
+                }
+                if ((this._mass_variantsTableAdapter != null)) {
+                    this._mass_variantsTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._mass_variantsTableAdapter]));
+                    this._mass_variantsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

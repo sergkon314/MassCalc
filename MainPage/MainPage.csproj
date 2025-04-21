@@ -59,13 +59,76 @@
     <Compile Include="Controls\DataGridViewFlickerFree.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Mass\MassBids.cs" />
-    <Compile Include="Mass\MassBids.Designer.cs">
-      <DependentUpon>MassBids.cs</DependentUpon>
+    <Compile Include="Controls\TreeViewFlickerFree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\BidVersionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\BidVersionView.Designer.cs">
+      <DependentUpon>BidVersionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ChoiseBidUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ChoiseBidUser.Designer.cs">
+      <DependentUpon>ChoiseBidUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ChoiseTextCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ChoiseTextCode.Designer.cs">
+      <DependentUpon>ChoiseTextCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\EnumSTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\EnumSTP.Designer.cs">
+      <DependentUpon>EnumSTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ProjectCopyFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ProjectCopyFrom.Designer.cs">
+      <DependentUpon>ProjectCopyFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ProjectCopyTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ProjectCopyTo.Designer.cs">
+      <DependentUpon>ProjectCopyTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ShowProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\ShowProjects.Designer.cs">
+      <DependentUpon>ShowProjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\StpEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\StpEdit.Designer.cs">
+      <DependentUpon>StpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\Dialogs\VariantsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mass\Dialogs\VariantsView.Designer.cs">
+      <DependentUpon>VariantsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mass\MassBids.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Mass\MassCalc.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Mass\VariantsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mass\VariantsPanel.Designer.cs">
+      <DependentUpon>VariantsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DataSetHelper.cs" />
     <Compile Include="Utils\DMSdbDataSet.cs">
       <DependentUpon>DMSdbDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -98,8 +161,36 @@
     <Compile Include="Utils\DmsMsgBoxs.cs" />
     <Compile Include="Utils\DmsStrings.cs" />
     <Compile Include="Utils\DmsTypes.cs" />
+    <Compile Include="Utils\PrintDGV.cs" />
     <EmbeddedResource Include="Main\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\BidVersionView.resx">
+      <DependentUpon>BidVersionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\ChoiseBidUser.resx">
+      <DependentUpon>ChoiseBidUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\ChoiseTextCode.resx">
+      <DependentUpon>ChoiseTextCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\EnumSTP.resx">
+      <DependentUpon>EnumSTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\ProjectCopyFrom.resx">
+      <DependentUpon>ProjectCopyFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\ProjectCopyTo.resx">
+      <DependentUpon>ProjectCopyTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\ShowProjects.resx">
+      <DependentUpon>ShowProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\StpEdit.resx">
+      <DependentUpon>StpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mass\Dialogs\VariantsView.resx">
+      <DependentUpon>VariantsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mass\MassFilling.resx">
       <DependentUpon>MassFilling.cs</DependentUpon>
@@ -136,9 +227,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mass\Dialogs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetPath)"  ..\..\..\Deploy\$(TargetFileName)</PostBuildEvent>
