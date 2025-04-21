@@ -59,6 +59,10 @@
     <Compile Include="Controls\DataGridViewFlickerFree.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Mass\MassBids.cs" />
+    <Compile Include="Mass\MassBids.Designer.cs">
+      <DependentUpon>MassBids.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mass\MassCalc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,7 +136,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Mass\Dialogs\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetPath)"  ..\..\..\Deploy\$(TargetFileName)</PostBuildEvent>

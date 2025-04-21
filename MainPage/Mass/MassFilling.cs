@@ -66,7 +66,7 @@ namespace dms.pages.Main
             ta_codes.Fill(dt_codes);
             ta_projects.Fill(dt_projects);
             InitProjectsGroupComboBox(ref cb_pgroup);
-            //cb_pgroup.SelectedIndex = MainPage.MassCalcSettingsObj.cbProjectsGroupSelectedIndex;
+            cb_pgroup.SelectedIndex = 0; //MainPage.MassCalcSettingsObj.cbProjectsGroupSelectedIndex;
             InitProjectsComboBox();
             ApplyGroupFilter();
             InitBidsStatusFilterComboBox();
@@ -95,7 +95,7 @@ namespace dms.pages.Main
             dg_bids.CellEndEdit += new DataGridViewCellEventHandler(dg_bids_CellEndEdit);
             dg_bids.DataError += new DataGridViewDataErrorEventHandler(dg_bids_DataError);
             dg_bids.ClearSelection();
-            //cb_projects.SelectedIndex = 0;
+            cb_projects.SelectedIndex = 0;
             SetChkMyProjectEnabled();
         }
 
@@ -151,27 +151,27 @@ namespace dms.pages.Main
         void dg_data_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             int id = Convert.ToInt32(dg_data.Rows[e.RowIndex].Cells["id"].Value);
-            //dmsMass.mass_data_bidRow row = dt_data.FindByid(id);
-            /*if (row.m < 0)
+            DMSdbDataSet.mass_data_bidRow row = dt_data.FindByid(id);
+            if (row.m < 0)
             {
                  DmsMsgBoxs.OkFail("Масса не должна задаваться отрицательным числом.");
                  dg_data.CancelEdit();
                  return;
-            }*/
-            //if (row.x > Lgb && e.ColumnIndex == 5)
-            //    DmsMsgBoxs.WarningOkParam("X больше установленной для проекта величины Lгб/2={0}.", Lgb);
+            }
+            if ((float)row.x > Lgb && e.ColumnIndex == 5)
+                DmsMsgBoxs.WarningOkParam("X больше установленной для проекта величины Lгб/2={0}.", Lgb);
 
-            //if (row.y > Bgb && e.ColumnIndex == 6)
-            //    DmsMsgBoxs.WarningOkParam("Y больше установленной для проекта величины Bгб/2={0}.", Bgb);
+            if ((float)row.y > Bgb && e.ColumnIndex == 6)
+                DmsMsgBoxs.WarningOkParam("Y больше установленной для проекта величины Bгб/2={0}.", Bgb);
 
-            //if (row.z > Hgb && e.ColumnIndex == 7)
-            //    DmsMsgBoxs.WarningOkParam("Z больше установленной для проекта величины Hгб={0}.", Hgb);
+            if ((float)row.z > Hgb && e.ColumnIndex == 7)
+                DmsMsgBoxs.WarningOkParam("Z больше установленной для проекта величины Hгб={0}.", Hgb);
 
-            //if (row.z < 0 && e.ColumnIndex == 7)
-            //    DmsMsgBoxs.WarningOkParam("Z меньше нуля: {0}.", row.z);
+            if (row.z < 0 && e.ColumnIndex == 7)
+                DmsMsgBoxs.WarningOkParam("Z меньше нуля: {0}.", row.z);
 
-            //ta_data.UpdateBidItem(row.code, row.name_code, row.m, row.x, row.y, row.z, row.id);
-            //CalcSum(ref dt_data);
+            ta_data.UpdateBidItem(row.code, row.name_code, row.m, row.x, row.y, row.z, row.id);
+            CalcSum(ref dt_data);
         }
 
         protected virtual void dg_bids_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -182,9 +182,9 @@ namespace dms.pages.Main
 
         protected virtual void dg_bids_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            //uint id = Convert.ToUInt32(dg_bids.Rows[e.RowIndex].Cells["id"].Value);
-            //dmsMass.mass_bidRow row = dt_bids.FindByid(id);
-            //int i = ta_bids.UpdateBidItem(row.bid_name, row.description, (int)row.id);
+            int id = (int)(dg_bids.Rows[e.RowIndex].Cells["id"].Value);
+            DMSdbDataSet.mass_bidRow row = dt_bids.FindByid(id);
+            int i = ta_bids.UpdateBidItem(row.bid_name, row.description, (int)row.id);
         }
 
         protected virtual void dg_data_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -327,35 +327,35 @@ namespace dms.pages.Main
         }
         protected virtual void chkFilterCopy_CheckedChanged(object sender, EventArgs e)
         {
-            //if (dt_bids.Select("version_by > 0").Length > 0)
-            //{
-            //    string filter = dt_bids.DefaultView.RowFilter;
-            //    if (chkFilterCopy.Checked)
-            //    {
-            //        if (string.IsNullOrEmpty(filter))
-            //        {
-            //            filter = "version_by=0";
-            //        }
-            //        else
-            //        {
-            //            filter += " and version_by=0";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        if (filter.Contains("and version_by=0"))
-            //        {
-            //            int i = filter.IndexOf("and version_by=0");
-            //            filter = filter.Substring(0, i);
-            //        }
-            //        if (filter.Contains("version_by=0"))
-            //        {
-            //            int i = filter.IndexOf("version_by=0");
-            //            filter = filter.Substring(0, i);
-            //        }
-            //    }
-            //    dt_bids.DefaultView.RowFilter = filter;
-            //}
+            if (dt_bids.Select("version_by > 0").Length > 0)
+            {
+                string filter = dt_bids.DefaultView.RowFilter;
+                if (chkFilterCopy.Checked)
+                {
+                    if (string.IsNullOrEmpty(filter))
+                    {
+                        filter = "version_by=0";
+                    }
+                    else
+                    {
+                        filter += " and version_by=0";
+                    }
+                }
+                else
+                {
+                    if (filter.Contains("and version_by=0"))
+                    {
+                        int i = filter.IndexOf("and version_by=0");
+                        filter = filter.Substring(0, i);
+                    }
+                    if (filter.Contains("version_by=0"))
+                    {
+                        int i = filter.IndexOf("version_by=0");
+                        filter = filter.Substring(0, i);
+                    }
+                }
+                dt_bids.DefaultView.RowFilter = filter;
+            }
         }
         protected virtual int GetBidCurrentClaim(DMSdbDataSet.mass_bidRow row)
         {

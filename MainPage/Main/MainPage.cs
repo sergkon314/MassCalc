@@ -35,12 +35,14 @@ namespace dms.pages.Main
                     P.Dock = DockStyle.Fill;
                     P.LoadData();
                     panel.Controls.Add(P);
+                    this.Refresh();
                     break;
                 case 2:
                     BasePage P2 = new MassCalc();
                     P2.Dock = DockStyle.Fill;
                     P2.LoadData();
                     panel.Controls.Add(P2);
+                    this.Refresh();
                     break;
                 default:
                     break;

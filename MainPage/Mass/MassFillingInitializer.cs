@@ -44,9 +44,8 @@ namespace dms.pages.Main
 
             col = cols["date_time"];
             col.DataPropertyName = "date_time";
-            col.Visible = true;
+            col.Visible = false;
             col.DisplayIndex = 0;
-            //col.ValueType = typeof(MySqlDateTime);
             col.ValueType = typeof(DateTime);
             col.DefaultCellStyle.Format = "dd'/'MM'/'yyyy";
             col.Width = 150;
@@ -105,8 +104,8 @@ namespace dms.pages.Main
             col.DataPropertyName = "hdatetime";
             col.Width = 150;
             col.HeaderText = "Создана";
-            //col.DisplayIndex = 5;
-            col.Visible = false;
+            col.DisplayIndex = 5;
+            col.Visible = true;
             col.ReadOnly = true;
             //
             col = cols["description"];
@@ -297,7 +296,7 @@ namespace dms.pages.Main
                     dtf = dt.Select("project_group=" + Convert.ToString(ind)) as DMSdbDataSet.mass_projectRow[];
                 }
             }
-            if (dtf.Length == 0 && cb_filter.Text != "")
+            if (dtf.Length == 0)
             {
                 DmsMsgBoxs.OkFail("Проектов в группе " + cb_filter.Text + " не найдено.");
             }
@@ -322,10 +321,10 @@ namespace dms.pages.Main
 
         protected virtual bool IsEditableByCurrntUser(string uid, int claim, int version_by)
         {
-            //if (claim == 0 && version_by == 0 && User2.IsCurrentUser(User2.UserByUid(uid)))
-            //{
-            //    return true;
-            //}
+            if (claim == 0 && version_by == 0) //&& User2.IsCurrentUser(User2.UserByUid(uid)))
+            {
+                return true;
+            }
             return false;
         }
 
@@ -376,11 +375,10 @@ namespace dms.pages.Main
             return "";
         }
 
-        //protected virtual string getHDateTime(MySqlDateTime datetime)
-        //{
-        //    DateTime dt = datetime.GetDateTime();
-        //    return dt.ToLongDateString() + " " + dt.ToShortTimeString();
-        //}
+        protected virtual string getHDateTime(DateTime datetime)
+        {
+            return datetime.ToLongDateString(); // + " " + datetime.ToShortTimeString();
+        }
         protected virtual void FillCustomFields(DMSdbDataSet.mass_bidDataTable dt)
         {
             foreach (DMSdbDataSet.mass_bidRow r in dt.Rows)
@@ -388,7 +386,7 @@ namespace dms.pages.Main
                 r.hclaim = getHClaim(r.claim);
                 //r.huid = getHUid(r.uid);
                 //r.hgid = getHGid(r.uid);
-                //r.hdatetime = getHDateTime(r.date_time);
+                r.hdatetime = getHDateTime(r.date_time);
                 r.beditable = true; //IsEditableByCurrntUser(r.uid, r.claim, r.version_by);
             }
         }
