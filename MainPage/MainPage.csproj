@@ -227,7 +227,39 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_row_insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_relationship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_row_delete.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetPath)"  ..\..\..\Deploy\$(TargetFileName)</PostBuildEvent>

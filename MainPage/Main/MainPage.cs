@@ -31,18 +31,16 @@ namespace dms.pages.Main
         {
             switch (number) { 
                 case 1:
-                    BasePage P = new MassFilling(this, "test");
+                    BasePage P = new MassBids(this, "test");
                     P.Dock = DockStyle.Fill;
                     P.LoadData();
                     panel.Controls.Add(P);
-                    this.Refresh();
                     break;
                 case 2:
                     BasePage P2 = new MassCalc();
                     P2.Dock = DockStyle.Fill;
                     P2.LoadData();
                     panel.Controls.Add(P2);
-                    this.Refresh();
                     break;
                 default:
                     break;
