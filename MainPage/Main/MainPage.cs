@@ -37,10 +37,10 @@ namespace dms.pages.Main
                     panel.Controls.Add(P);
                     break;
                 case 2:
-                    BasePage P2 = new MassCalc();
-                    P2.Dock = DockStyle.Fill;
-                    P2.LoadData();
-                    panel.Controls.Add(P2);
+                    //BasePage P2 = new MassCalc(this, "test");
+                    //P2.Dock = DockStyle.Fill;
+                    //P2.LoadData();
+                    //panel.Controls.Add(P2);
                     break;
                 default:
                     break;

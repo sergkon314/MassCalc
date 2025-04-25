@@ -8,3 +8,12 @@ C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\
 C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Main.MainPage.resources
 C:\Users\legs\Documents\Visual Studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Main.MassFilling.resources
 C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\MainPage.csprojResolveAssemblyReference.cache
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.BidVersionView.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.ChoiseBidUser.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.ChoiseTextCode.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.EnumSTP.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.ProjectCopyFrom.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.ProjectCopyTo.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.ShowProjects.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.StpEdit.resources
+C:\Users\legs\documents\visual studio 2010\Projects\SampleProgram2\MainPage\obj\x86\Debug\dms.pages.Mass.Dialogs.VariantsView.resources

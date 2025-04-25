@@ -2342,21 +2342,21 @@ namespace dms.pages.Utils {
                         int id, 
                         string name, 
                         int type, 
-                        string prototype, 
+                        int prototype, 
                         string description, 
                         string shiptype, 
                         string mute, 
                         string master, 
                         int project_group, 
-                        string num_type1, 
-                        string num_type2, 
+                        int num_type1, 
+                        int num_type2, 
                         int deleted, 
                         decimal Lgb, 
                         decimal Bgb, 
                         decimal Hgb, 
                         decimal custom_stp_m, 
                         decimal custom_stp_z, 
-                        string custom_stp) {
+                        int custom_stp) {
                 mass_projectRow rowmass_projectRow = ((mass_projectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -2435,7 +2435,7 @@ namespace dms.pages.Utils {
                 base.Columns.Add(this.columnname);
                 this.columntype = new global::System.Data.DataColumn("type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntype);
-                this.columnprototype = new global::System.Data.DataColumn("prototype", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnprototype = new global::System.Data.DataColumn("prototype", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprototype);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
@@ -2447,9 +2447,9 @@ namespace dms.pages.Utils {
                 base.Columns.Add(this.columnmaster);
                 this.columnproject_group = new global::System.Data.DataColumn("project_group", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproject_group);
-                this.columnnum_type1 = new global::System.Data.DataColumn("num_type1", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnnum_type1 = new global::System.Data.DataColumn("num_type1", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_type1);
-                this.columnnum_type2 = new global::System.Data.DataColumn("num_type2", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnnum_type2 = new global::System.Data.DataColumn("num_type2", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_type2);
                 this.columndeleted = new global::System.Data.DataColumn("deleted", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndeleted);
@@ -2463,7 +2463,7 @@ namespace dms.pages.Utils {
                 base.Columns.Add(this.columncustom_stp_m);
                 this.columncustom_stp_z = new global::System.Data.DataColumn("custom_stp_z", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustom_stp_z);
-                this.columncustom_stp = new global::System.Data.DataColumn("custom_stp", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncustom_stp = new global::System.Data.DataColumn("custom_stp", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustom_stp);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
@@ -2473,7 +2473,6 @@ namespace dms.pages.Utils {
                 this.columnname.MaxLength = 255;
                 this.columntype.AllowDBNull = false;
                 this.columnprototype.AllowDBNull = false;
-                this.columnprototype.MaxLength = 5;
                 this.columndescription.AllowDBNull = false;
                 this.columndescription.MaxLength = 255;
                 this.columnshiptype.AllowDBNull = false;
@@ -2484,15 +2483,12 @@ namespace dms.pages.Utils {
                 this.columnmaster.MaxLength = 20;
                 this.columnproject_group.AllowDBNull = false;
                 this.columnnum_type1.AllowDBNull = false;
-                this.columnnum_type1.MaxLength = 5;
                 this.columnnum_type2.AllowDBNull = false;
-                this.columnnum_type2.MaxLength = 5;
                 this.columndeleted.AllowDBNull = false;
                 this.columnLgb.AllowDBNull = false;
                 this.columnBgb.AllowDBNull = false;
                 this.columnHgb.AllowDBNull = false;
                 this.columncustom_stp_m.AllowDBNull = false;
-                this.columncustom_stp.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4547,9 +4543,9 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string prototype {
+            public int prototype {
                 get {
-                    return ((string)(this[this.tablemass_project.prototypeColumn]));
+                    return ((int)(this[this.tablemass_project.prototypeColumn]));
                 }
                 set {
                     this[this.tablemass_project.prototypeColumn] = value;
@@ -4613,9 +4609,9 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string num_type1 {
+            public int num_type1 {
                 get {
-                    return ((string)(this[this.tablemass_project.num_type1Column]));
+                    return ((int)(this[this.tablemass_project.num_type1Column]));
                 }
                 set {
                     this[this.tablemass_project.num_type1Column] = value;
@@ -4624,9 +4620,9 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string num_type2 {
+            public int num_type2 {
                 get {
-                    return ((string)(this[this.tablemass_project.num_type2Column]));
+                    return ((int)(this[this.tablemass_project.num_type2Column]));
                 }
                 set {
                     this[this.tablemass_project.num_type2Column] = value;
@@ -4706,10 +4702,10 @@ namespace dms.pages.Utils {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string custom_stp {
+            public int custom_stp {
                 get {
                     try {
-                        return ((string)(this[this.tablemass_project.custom_stpColumn]));
+                        return ((int)(this[this.tablemass_project.custom_stpColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'custom_stp\' в таблице \'mass_project\' равно DBNull.", e);
@@ -6311,7 +6307,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[8];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[10];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"id\", \"bid_id\", \"code\", \"name_code\", \"m\", \"x\", \"y\", \"z\", \"mx\", \"my\", \"mz\" " +
@@ -6319,58 +6315,79 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM mass_data_bid WHERE (bid_id = ?)";
+            this._commandCollection[1].CommandText = "INSERT INTO \"DMSdb\".\"public\".\"mass_data_bid\" (\"code\", \"name_code\", \"m\", \"x\", \"y\"," +
+                " \"z\") VALUES (?, ?, ?, ?, ?, ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM mass_data_bid WHERE (id = ?)";
+            this._commandCollection[2].CommandText = "DELETE FROM mass_data_bid WHERE (bid_id = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        id, bid_id, code, name_code, m, x, y, z\r\nFROM            \"public\".m" +
-                "ass_data_bid\r\nWHERE        (bid_id = ?)";
+            this._commandCollection[3].CommandText = "DELETE FROM mass_data_bid WHERE (id = ?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT \"id\", \"bid_id\", \"code\", \"name_code\", \"m\", \"x\", \"y\", \"z\", \"mx\", \"my\", \"mz\" " +
-                "FROM \"public\".\"mass_data_bid\" where bid_id = ?";
+            this._commandCollection[4].CommandText = "SELECT        id, bid_id, code, name_code, m, x, y, z\r\nFROM            \"public\".m" +
+                "ass_data_bid\r\nWHERE        (bid_id = ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "INSERT INTO \"DMSdb\".\"public\".\"mass_data_bid\" (\"bid_id\", \"code\", \"name_code\") VALU" +
-                "ES (?, ?, ?)";
+            this._commandCollection[5].CommandText = @"SELECT     mass_data_bid.id, mass_data_bid.bid_id, mass_data_bid.code, mass_data_bid.name_code, mass_data_bid.m, mass_data_bid.x, mass_data_bid.y, 
+                      mass_data_bid.z
+FROM         mass_bid 
+INNER JOIN
+                      mass_data_bid ON mass_bid.id = mass_data_bid.bid_id
+WHERE     (mass_project_id = ?) AND (claim = 3)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mass_project_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mass_project_id", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "INSERT INTO mass_data_bid (bid_id, code, name_code, m, x, y, z) VALUES (?, ?, ?, " +
-                "?, ?, ?, ?)";
+            this._commandCollection[6].CommandText = "SELECT \"id\", \"bid_id\", \"code\", \"name_code\", \"m\", \"x\", \"y\", \"z\", \"mx\", \"my\", \"mz\" " +
+                "FROM \"public\".\"mass_data_bid\" where bid_id = ?";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[6].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "UPDATE    mass_data_bid SET code = ?, name_code = ?, m = ?, x = ?, y = ?, z = ? W" +
-                "HERE (id = ?)";
+            this._commandCollection[7].CommandText = "INSERT INTO \"DMSdb\".\"public\".\"mass_data_bid\" (\"bid_id\", \"code\", \"name_code\") VALU" +
+                "ES (?, ?, ?)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[8] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "INSERT INTO mass_data_bid (bid_id, code, name_code, m, x, y, z) VALUES (?, ?, ?, " +
+                "?, ?, ?, ?)";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("bid_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "bid_id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "UPDATE    mass_data_bid SET code = ?, name_code = ?, m = ?, x = ?, y = ?, z = ? W" +
+                "HERE (id = ?)";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name_code", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name_code", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("m", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(3)), "m", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("x", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "x", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("y", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "y", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("z", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(3)), "z", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6402,7 +6419,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBidData(DMSdbDataSet.mass_data_bidDataTable dataTable, int bid_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6416,7 +6433,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DMSdbDataSet.mass_data_bidDataTable GetBidData(int bid_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
             DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
             this.Adapter.Fill(dataTable);
@@ -6427,8 +6444,20 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DMSdbDataSet.mass_data_bidDataTable GetAssemblyData(int mass_project_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mass_project_id));
+            DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DMSdbDataSet.mass_data_bidDataTable GetDataForCopy(int bid_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand = this.CommandCollection[6];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(bid_id));
             DMSdbDataSet.mass_data_bidDataTable dataTable = new DMSdbDataSet.mass_data_bidDataTable();
             this.Adapter.Fill(dataTable);
@@ -6665,9 +6694,48 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int Addmass_data_bidRow(string code, string name_code, decimal m, decimal x, decimal y, decimal z) {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[1];
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(code));
+            }
+            if ((name_code == null)) {
+                throw new global::System.ArgumentNullException("name_code");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(name_code));
+            }
+            command.Parameters[2].Value = ((decimal)(m));
+            command.Parameters[3].Value = ((decimal)(x));
+            command.Parameters[4].Value = ((decimal)(y));
+            command.Parameters[5].Value = ((decimal)(z));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
         public virtual int DeleteBidData(int bid_id) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[1];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(bid_id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6691,7 +6759,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
         public virtual int DeleteBidItemData(int id) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[2];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6715,7 +6783,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int Insert1(int bid_id, string code, string name_code) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[5];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[7];
             command.Parameters[0].Value = ((int)(bid_id));
             if ((code == null)) {
                 throw new global::System.ArgumentNullException("code");
@@ -6751,7 +6819,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertItemCopy(int bid_id, string code, string name_code, decimal m, decimal x, decimal y, decimal z) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[6];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[8];
             command.Parameters[0].Value = ((int)(bid_id));
             if ((code == null)) {
                 throw new global::System.ArgumentNullException("code");
@@ -6791,7 +6859,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateBidItem(string code, string name_code, decimal m, decimal x, decimal y, decimal z, int Original_id) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[7];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[9];
             if ((code == null)) {
                 throw new global::System.ArgumentNullException("code");
             }
@@ -7914,7 +7982,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[3];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"id\", \"name\", \"type\", \"prototype\", \"description\", \"shiptype\", \"mute\", \"mas" +
@@ -7923,10 +7991,14 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        id, name, type, prototype, description, master, project_group, num_" +
+            this._commandCollection[1].CommandText = "INSERT INTO mass_project SET name=\\\'новый проект\\\'";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        id, name, type, prototype, description, master, project_group, num_" +
                 "type1, num_type2, deleted, \"Bgb\", \"Hgb\", \"Lgb\", custom_stp, custom_stp_m, custom" +
                 "_stp_z \r\nFROM mass_project ORDER BY name";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7958,7 +8030,7 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillAll(DMSdbDataSet.mass_projectDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -8427,6 +8499,29 @@ namespace dms.pages.Utils.DMSdbDataSetTableAdapters {
                     decimal Original_custom_stp_z, 
                     string Original_custom_stp) {
             return this.Update(Original_id, name, type, prototype, description, shiptype, mute, master, project_group, num_type1, num_type2, deleted, Lgb, Bgb, Hgb, custom_stp_m, custom_stp_z, custom_stp, Original_id, Original_name, Original_type, Original_prototype, Original_description, Original_shiptype, Original_mute, Original_master, Original_project_group, Original_num_type1, Original_num_type2, Original_deleted, Original_Lgb, Original_Bgb, Original_Hgb, Original_custom_stp_m, Original_custom_stp_z, Original_custom_stp);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int AddProject() {
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[1];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

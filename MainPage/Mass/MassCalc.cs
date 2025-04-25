@@ -8,7 +8,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Globalization;
 using System.Threading;
-
+using dms.pages.Utils.DMSdbDataSetTableAdapters;
+using dms.pages.Mass.Dialogs;
 namespace dms.pages.Main
 {
     public partial class MassCalc : MassFilling
@@ -24,8 +25,8 @@ namespace dms.pages.Main
         private System.Windows.Forms.Label label10;
 
         protected DMSdbDataSet.mass_stp_21DataTable dt_stp = new DMSdbDataSet.mass_stp_21DataTable();
-        //protected dmsMass.mass_data_bidDataTable dt_assembly;
-        //protected dmsMassTableAdapters.mass_stp_21TableAdapter ta_stp = new dmsMassTableAdapters.mass_stp_21TableAdapter();
+        protected DMSdbDataSet.mass_data_bidDataTable dt_assembly;
+        protected mass_stp_21TableAdapter ta_stp = new mass_stp_21TableAdapter();
         private Button btn_report1;
         private Button btn_calc;
         private Button btn_alldata;
@@ -97,19 +98,19 @@ namespace dms.pages.Main
         private CheckBox chkCustomStp;
         private Label label21;
         private CheckBox chkActive;
-        //protected dmsMassTableAdapters.mass_variantsTableAdapter ta_variants = new dmsMassTableAdapters.mass_variantsTableAdapter();
+        protected mass_variantsTableAdapter ta_variants = new mass_variantsTableAdapter();
 
 
-        //private float[, ,] PrecTable;
-        //private float[, ,] PrecTable2;
-        //private float[, ,] PrecTable3;
-        //public MassCalc(MainPage o, string name)
-        //    : base(o, name)
-        //{
-        //    InitializeComponent();
-        //    ta_variants.Connection.ConnectionString = MysglConString;
-        //    ta_stp.Connection.ConnectionString = MysglConString;
-        //}
+        private float[, ,] PrecTable;
+        private float[, ,] PrecTable2;
+        private float[, ,] PrecTable3;
+        public MassCalc(MainPage o, string name)
+            : base(o, name)
+        {
+            InitializeComponent();
+            ta_variants.Connection.ConnectionString = MysglConString;
+            ta_stp.Connection.ConnectionString = MysglConString;
+        }
 
         new private void InitializeComponent()
         {
@@ -1179,89 +1180,89 @@ namespace dms.pages.Main
             this.ResumeLayout(false);
         }
 
-        //protected override void FillCustomFields(dmsMass.mass_bidDataTable dt)
-        //{
-        //    foreach (dmsMass.mass_bidRow r in dt.Rows)
-        //    {
-        //        r.hclaim = getHClaim(r.claim);
-        //        r.huid = getHUid(r.uid);
-        //        r.hgid = getHGid(r.uid);
-        //        r.hdatetime = getHDateTime(r.date_time);
-        //        r.beditable = false;
-        //    }
-        //}
+        protected override void FillCustomFields(DMSdbDataSet.mass_bidDataTable dt)
+        {
+            foreach (DMSdbDataSet.mass_bidRow r in dt.Rows)
+            {
+                r.hclaim = getHClaim(r.claim);
+                r.huid = getHUid(r.uid);
+                r.hgid = getHGid(r.uid);
+                r.hdatetime = getHDateTime(r.date_time);
+                r.beditable = false;
+            }
+        }
 
-        //protected override void dg_bids_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    base.dg_bids_SelectionChanged(sender, e);
-        //    SetClaim3State();
-        //}
+        protected override void dg_bids_SelectionChanged(object sender, EventArgs e)
+        {
+            base.dg_bids_SelectionChanged(sender, e);
+            SetClaim3State();
+        }
 
-        //private void SetClaim3State()
-        //{
-        //    if (dg_bids.SelectedRows.Count == 0)
-        //        return;
-        //    uint id = Convert.ToUInt32(dg_bids.SelectedRows[0].Cells["id"].Value);
-        //    dmsMass.mass_bidRow row = dt_bids.FindByid(id);
-        //    chk_claim3.Enabled = (row.claim == 2 || row.claim == 3);
-        //    chk_claim3.Checked = row.claim == 3;
-        //    if (cb_pgroup.SelectedIndex == 8)// проработка
-        //    {
-        //        chk_claim3.Enabled = true;
-        //    }
-        //}
+        private void SetClaim3State()
+        {
+            if (dg_bids.SelectedRows.Count == 0)
+                return;
+            int id = (int)(dg_bids.SelectedRows[0].Cells["id"].Value);
+            DMSdbDataSet.mass_bidRow row = dt_bids.FindByid(id);
+            chk_claim3.Enabled = (row.claim == 2 || row.claim == 3);
+            chk_claim3.Checked = row.claim == 3;
+            if (cb_pgroup.SelectedIndex == 8)// проработка
+            {
+                chk_claim3.Enabled = true;
+            }
+        }
 
-        //public override void LoadData(object extData)
-        //{
-        //    base.LoadData(extData);
-        //    dg_data.Height = 460;
-        //    ta_stp.Fill(dt_stp);
-        //    dt_variants_koeff = ta_variants.GetData();
-        //    InitProjectsGroupComboBox(ref cb_projectgroup);
-        //    InitProjectsDescriptionComboBox(ref cb_pdescr);
-        //    InitMastersComboBox(ref cb_pmasters);
-        //    BinaryFormatter b = new BinaryFormatter();
-        //    if (File.Exists("mass\\A3.tb"))
-        //    {
-        //        try
-        //        {
-        //            using (var s = File.Open("mass\\A3.tb", FileMode.Open, FileAccess.Read))
-        //            {
-        //                PrecTable = (float[, ,])b.Deserialize(s);
-        //                s.Close();
-        //            }
-        //        }
-        //        catch (Exception ex) { MessageBox.Show(this, ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-        //    }
-        //    else { DmsMsgBoxs.OkFail("Файл mass\\A3.tb не найден"); }
-        //    if (File.Exists("mass\\A4.tb"))
-        //    {
-        //        try
-        //        {
-        //            using (var s = File.Open("mass\\A4.tb", FileMode.Open, FileAccess.Read))
-        //            {
-        //                PrecTable2 = (float[, ,])b.Deserialize(s);
-        //                s.Close();
-        //            }
-        //        }
-        //        catch (Exception ex) { MessageBox.Show(this, ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-        //    }
-        //    else { DmsMsgBoxs.OkFail("Файл mass\\A4.tb не найден"); }
-        //    if (File.Exists("mass\\A5.tb"))
-        //    {
-        //        try
-        //        {
-        //            using (var s = File.Open("mass\\A5.tb", FileMode.Open, FileAccess.Read))
-        //            {
-        //                PrecTable3 = (float[, ,])b.Deserialize(s);
-        //                s.Close();
-        //            }
-        //        }
-        //        catch (Exception ex) { MessageBox.Show(this, ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-        //    }
-        //    else { DmsMsgBoxs.OkFail("Файл mass\\A5.tb не найден"); }
-        //    //q();
-        //}
+        public override void LoadData(object extData)
+        {
+            base.LoadData(extData);
+            dg_data.Height = 460;
+            ta_stp.Fill(dt_stp);
+            dt_variants_koeff = ta_variants.GetData();
+            InitProjectsGroupComboBox(ref cb_projectgroup);
+            InitProjectsDescriptionComboBox(ref cb_pdescr);
+            //InitMastersComboBox(ref cb_pmasters);
+            BinaryFormatter b = new BinaryFormatter();
+            if (File.Exists("mass\\A3.tb"))
+            {
+                try
+                {
+                    using (var s = File.Open("mass\\A3.tb", FileMode.Open, FileAccess.Read))
+                    {
+                        PrecTable = (float[, ,])b.Deserialize(s);
+                        s.Close();
+                    }
+                }
+                catch (Exception ex) { MessageBox.Show(this, ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            }
+            else { DmsMsgBoxs.OkFail("Файл mass\\A3.tb не найден"); }
+            if (File.Exists("mass\\A4.tb"))
+            {
+                try
+                {
+                    using (var s = File.Open("mass\\A4.tb", FileMode.Open, FileAccess.Read))
+                    {
+                        PrecTable2 = (float[, ,])b.Deserialize(s);
+                        s.Close();
+                    }
+                }
+                catch (Exception ex) { MessageBox.Show(this, ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            }
+            else { DmsMsgBoxs.OkFail("Файл mass\\A4.tb не найден"); }
+            if (File.Exists("mass\\A5.tb"))
+            {
+                try
+                {
+                    using (var s = File.Open("mass\\A5.tb", FileMode.Open, FileAccess.Read))
+                    {
+                        PrecTable3 = (float[, ,])b.Deserialize(s);
+                        s.Close();
+                    }
+                }
+                catch (Exception ex) { MessageBox.Show(this, ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            }
+            else { DmsMsgBoxs.OkFail("Файл mass\\A5.tb не найден"); }
+            //q();
+        }
 
         public void q()
         {
@@ -1320,177 +1321,177 @@ namespace dms.pages.Main
         //    cb.ValueMember = "Uid";
         //}
 
-        //protected override void MassFilling_Load(object sender, EventArgs e)
-        //{
-        //    base.MassFilling_Load(sender, e);
-        //    FillProjectForm();
-        //}
+        protected override void MassFilling_Load(object sender, EventArgs e)
+        {
+            base.MassFilling_Load(sender, e);
+            FillProjectForm();
+        }
 
-        //protected override void FilterBidsByProject(object sender, EventArgs e)
-        //{
-        //    base.FilterBidsByProject(sender, e);
-        //    FillProjectForm();
-        //}
+        protected override void FilterBidsByProject(object sender, EventArgs e)
+        {
+            base.FilterBidsByProject(sender, e);
+            FillProjectForm();
+        }
 
-        //protected override void FilterProject(object sender, EventArgs e)
-        //{
-        //    base.FilterProject(sender, e);
-        //    FillProjectForm();
-        //}
+        protected override void FilterProject(object sender, EventArgs e)
+        {
+            base.FilterProject(sender, e);
+            FillProjectForm();
+        }
 
-        //private void FillProjectForm()
-        //{
-        //    dmsMass.mass_projectRow p = GetSelectedProject();
-        //    if (p == null) return;
-        //    txt_pname.Text = p.name;
-        //    txt_pdescription.Text = p.description;
-        //    cb_projectgroup.SelectedIndex = (int)p.project_group;
-        //    User2 u = User2.UserByUid(p.master);
-        //    cb_pmasters.Text = u.ShortName;
-        //    cb_pmasters.SelectedItem = u;
-        //    cb_pdescr.SelectedIndex = p.type;
-        //    rb_mute0.Checked = p.num_type2 == 0;
-        //    rb_mute1.Checked = p.num_type2 == 1;
-        //    rb_typeShip.Checked = p.num_type1 == 1;
-        //    rb_typeDock.Checked = p.num_type1 == 0;
-        //    rb_proto0.Checked = p.prototype == 0;
-        //    rb_proto1.Checked = p.prototype == 1;
-        //    txt_gbL.Text = p.Lgb.ToString();
-        //    txt_gbB.Text = p.Bgb.ToString();
-        //    txt_gbH.Text = p.Hgb.ToString();
-        //    chkCustomStp.Checked = p.custom_stp == 1;
-        //    txtCustomM.Text = p.custom_stp_m.ToString();
-        //    txtCustomZ.Text = p.custom_stp_z.ToString();
-        //    chkActive.Checked = p.deleted == 2;
-        //}
+        private void FillProjectForm()
+        {
+            DMSdbDataSet.mass_projectRow p = GetSelectedProject();
+            if (p == null) return;
+            txt_pname.Text = p.name;
+            txt_pdescription.Text = p.description;
+            cb_projectgroup.SelectedIndex = (int)p.project_group;
+            //User2 u = User2.UserByUid(p.master);
+            //cb_pmasters.Text = u.ShortName;
+            //cb_pmasters.SelectedItem = u;
+            cb_pdescr.SelectedIndex = p.type;
+            rb_mute0.Checked = p.num_type2 == 0;
+            rb_mute1.Checked = p.num_type2 == 1;
+            rb_typeShip.Checked = p.num_type1 == 1;
+            rb_typeDock.Checked = p.num_type1 == 0;
+            rb_proto0.Checked = p.prototype == 0;
+            rb_proto1.Checked = p.prototype == 1;
+            txt_gbL.Text = p.Lgb.ToString();
+            txt_gbB.Text = p.Bgb.ToString();
+            txt_gbH.Text = p.Hgb.ToString();
+            chkCustomStp.Checked = p.custom_stp == 1;
+            txtCustomM.Text = p.custom_stp_m.ToString();
+            txtCustomZ.Text = p.custom_stp_z.ToString();
+            chkActive.Checked = p.deleted == 2;
+        }
 
-        //private void btn_padd_Click(object sender, EventArgs e)
-        //{
-        //    if (!DmsMsgBoxs.InfoOkCancelParam("Создаваемый проект будет доступен в разделе 'прочее' под названием '{0}'. Продолжить?", "новый проект"))
-        //        return;
-        //    ta_projects.AddProject();
-        //    //int id = (int)ta_projects.LastInsertId();
-        //    ta_projects.Fill(dt_projects);
-        //    int id = Convert.ToInt32(dt_projects.Compute("max(id)", string.Empty));
-        //    ApplyProjectFilter(cb_pgroup, cb_projects, dt_projects, chk_myprojects.Checked);
-        //    if (cb_pgroup.SelectedIndex == 7)//прочее
-        //    {
-        //        cb_projects.SelectedValue = id;
-        //        FillProjectForm();
-        //    }
+        private void btn_padd_Click(object sender, EventArgs e)
+        {
+            if (!DmsMsgBoxs.InfoOkCancelParam("Создаваемый проект будет доступен в разделе 'прочее' под названием '{0}'. Продолжить?", "новый проект"))
+                return;
+            ta_projects.AddProject();
+            //int id = (int)ta_projects.LastInsertId();
+            ta_projects.Fill(dt_projects);
+            int id = Convert.ToInt32(dt_projects.Compute("max(id)", string.Empty));
+            ApplyProjectFilter(cb_pgroup, cb_projects, dt_projects, chk_myprojects.Checked);
+            if (cb_pgroup.SelectedIndex == 7)//прочее
+            {
+                cb_projects.SelectedValue = id;
+                FillProjectForm();
+            }
 
 
-        //}
+        }
 
-        //private void btn_pdelete_Click(object sender, EventArgs e)
-        //{
-        //    dmsMass.mass_projectRow row = GetSelectedProject();
-        //    if (!DmsMsgBoxs.WarningOkCancelParam(DmsStings.MASS_PROGECT_CANDELETE, row.name))
-        //        return;
+        private void btn_pdelete_Click(object sender, EventArgs e)
+        {
+            DMSdbDataSet.mass_projectRow row = GetSelectedProject();
+            if (!DmsMsgBoxs.WarningOkCancelParam(DmsStings.MASS_PROGECT_CANDELETE, row.name))
+                return;
 
-        //    row.BeginEdit();
-        //    row.deleted = 1;
-        //    row.EndEdit();
-        //    ta_projects.Update(row);
-        //    ta_projects.Fill(dt_projects);
-        //    ApplyProjectFilter(cb_pgroup, cb_projects, dt_projects, chk_myprojects.Checked);
-        //    FillProjectForm();
-        //}
+            row.BeginEdit();
+            row.deleted = 1;
+            row.EndEdit();
+            ta_projects.Update(row);
+            ta_projects.Fill(dt_projects);
+            ApplyProjectFilter(cb_pgroup, cb_projects, dt_projects, chk_myprojects.Checked);
+            FillProjectForm();
+        }
 
-        //private void btn_psave_Click(object sender, EventArgs e)
-        //{
-        //    dmsMass.mass_projectRow row = GetSelectedProject();
-        //    row.BeginEdit();
-        //    row.name = txt_pname.Text;
-        //    row.description = txt_pdescription.Text;
-        //    row.project_group = (uint)cb_projectgroup.SelectedIndex;
-        //    row.master = (cb_pmasters.SelectedItem as User2).Uid;
-        //    row.prototype = rb_proto0.Checked ? 0 : 1;
-        //    row.num_type1 = rb_typeDock.Checked ? 0 : 1;
-        //    row.num_type2 = rb_mute0.Checked ? 0 : 1;
-        //    row.type = cb_pdescr.SelectedIndex;
-        //    row.deleted = chkActive.Checked ? 2 : 0;
-        //    try
-        //    {
-        //        row.Lgb = Convert.ToSingle(txt_gbL.Text);
-        //        row.Bgb = Convert.ToSingle(txt_gbB.Text);
-        //        row.Hgb = Convert.ToSingle(txt_gbH.Text);
-        //        row.custom_stp = chkCustomStp.Checked ? (uint)1 : 0;
-        //        row.custom_stp_m = Convert.ToSingle(txtCustomM.Text);
-        //        row.custom_stp_z = Convert.ToSingle(txtCustomZ.Text);
-        //        row.EndEdit();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        DmsMsgBoxs.OkFail(ex.Message);
-        //    }
-        //    int i = ta_projects.Update(row);
-        //}
+        private void btn_psave_Click(object sender, EventArgs e)
+        {
+            DMSdbDataSet.mass_projectRow row = GetSelectedProject();
+            row.BeginEdit();
+            row.name = txt_pname.Text;
+            row.description = txt_pdescription.Text;
+            row.project_group = (int)cb_projectgroup.SelectedIndex;
+            //row.master = (cb_pmasters.SelectedItem as User2).Uid;
+            row.prototype = rb_proto0.Checked ? 0 : 1;
+            row.num_type1 = rb_typeDock.Checked ? 0 : 1;
+            row.num_type2 = rb_mute0.Checked ? 0 : 1;
+            row.type = cb_pdescr.SelectedIndex;
+            row.deleted = chkActive.Checked ? 2 : 0;
+            try
+            {
+                row.Lgb = (decimal)Convert.ToSingle(txt_gbL.Text);
+                row.Bgb = (decimal)Convert.ToSingle(txt_gbB.Text);
+                row.Hgb = (decimal)Convert.ToSingle(txt_gbH.Text);
+                row.custom_stp = chkCustomStp.Checked ? (int)1 : 0;
+                row.custom_stp_m = (decimal)Convert.ToSingle(txtCustomM.Text);
+                row.custom_stp_z = (decimal)Convert.ToSingle(txtCustomZ.Text);
+                row.EndEdit();
+            }
+            catch (Exception ex)
+            {
+                DmsMsgBoxs.OkFail(ex.Message);
+            }
+            int i = ta_projects.Update(row);
+        }
 
-        //private void btn_alldata_Click(object sender, EventArgs e)
-        //{
-        //    cb_status.SelectedValue = "claim=3";
-        //    //ApplyBidFilter();
-        //    LoadAssembledData();
-        //}
+        private void btn_alldata_Click(object sender, EventArgs e)
+        {
+            cb_status.SelectedValue = "claim=3";
+            //ApplyBidFilter();
+            LoadAssembledData();
+        }
 
-        //private void btn_editstp_Click(object sender, EventArgs e)
-        //{
-        //    StpEdit d = new StpEdit(ref dt_variants_koeff);
-        //    d.ShowDialog();
-        //}
+        private void btn_editstp_Click(object sender, EventArgs e)
+        {
+            StpEdit d = new StpEdit(ref dt_variants_koeff);
+            d.ShowDialog();
+        }
 
-        //private void LoadAssembledData()
-        //{
-        //    dmsMass.mass_projectRow row = GetSelectedProject();
-        //    dt_assembly = ta_data.GetAssemblyData(row.id);
-        //    DataTableHelper.SortDataTable(dt_assembly, "code ASC");
-        //    //dt_assembly.DefaultView.Sort = "code ASC";
-        //    dg_data.DataSource = dt_assembly;
-        //    dg_data.ReadOnly = true;
-        //    gb_data.Text = "Сводные данные: проект '" + row.name + "' (только чтение) ";
-        //    full_mass = CalcSum(ref dt_assembly);
+        private void LoadAssembledData()
+        {
+            DMSdbDataSet.mass_projectRow row = GetSelectedProject();
+            dt_assembly = ta_data.GetAssemblyData(row.id);
+            DataTableHelper.SortDataTable(dt_assembly, "code ASC");
+            //dt_assembly.DefaultView.Sort = "code ASC";
+            dg_data.DataSource = dt_assembly;
+            dg_data.ReadOnly = true;
+            gb_data.Text = "Сводные данные: проект '" + row.name + "' (только чтение) ";
+            full_mass = CalcSum(ref dt_assembly);
 
-        //}
+        }
 
-        //private void chk_claim3_Click(object sender, EventArgs e)
-        //{
-        //    if (dg_bids.SelectedRows.Count == 0)
-        //    {
-        //        chk_claim3.Checked = false;
-        //        return;
-        //    }
-        //    bool chk = chk_claim3.Checked;
-        //    uint id = Convert.ToUInt32(dg_bids.SelectedRows[0].Cells["id"].Value);
-        //    dmsMass.mass_bidRow row = dt_bids.FindByid(id);
+        private void chk_claim3_Click(object sender, EventArgs e)
+        {
+            if (dg_bids.SelectedRows.Count == 0)
+            {
+                chk_claim3.Checked = false;
+                return;
+            }
+            bool chk = chk_claim3.Checked;
+            int id = (int)(dg_bids.SelectedRows[0].Cells["id"].Value);
+            DMSdbDataSet.mass_bidRow row = dt_bids.FindByid(id);
 
-        //    row.BeginEdit();
-        //    if (cb_pgroup.SelectedIndex == 8)// проработка
-        //    {
-        //        //if (GetBidCurrentClaim(row) != 0)
-        //        //    return;
-        //        row.claim = chk ? (uint)3 : 0;
-        //    }
-        //    else
-        //    {
-        //        if (GetBidCurrentClaim(row) < 2)
-        //            return;
-        //        row.claim = chk ? (uint)3 : 2;
-        //    }
-        //    row.hclaim = getHClaim(row.claim);
-        //    row.EndEdit();
-        //    ta_bids.Update(row);
-        //}
+            row.BeginEdit();
+            if (cb_pgroup.SelectedIndex == 8)// проработка
+            {
+                //if (GetBidCurrentClaim(row) != 0)
+                //    return;
+                row.claim = chk ? (int)3 : 0;
+            }
+            else
+            {
+                if (GetBidCurrentClaim(row) < 2)
+                    return;
+                row.claim = chk ? (int)3 : 2;
+            }
+            row.hclaim = getHClaim(row.claim);
+            row.EndEdit();
+            ta_bids.Update(row);
+        }
 
-        //private void btn_calc_Click(object sender, EventArgs e)
-        //{
-        //    CalcEntry();
-        //}
+        private void btn_calc_Click(object sender, EventArgs e)
+        {
+            CalcEntry();
+        }
 
-        //private void btn_calc2_Click(object sender, EventArgs e)
-        //{
-        //    FillingCalcEntry();
-        //}
+        private void btn_calc2_Click(object sender, EventArgs e)
+        {
+            FillingCalcEntry();
+        }
 
         //private void btn_report1_Click(object sender, EventArgs e)
         //{
@@ -1501,22 +1502,23 @@ namespace dms.pages.Main
         //{
         //    Report2Entry();
         //}
-        //private void txt_gb_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == '.')
-        //        e.KeyChar = ',';
-        //    if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ',')
-        //    {
-        //        e.Handled = true;
-        //    }
 
-        //}
+        private void txt_gb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '.')
+                e.KeyChar = ',';
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
 
-        //private void lbl_num_projects_DoubleClick(object sender, EventArgs e)
-        //{
-        //    ShowProjects dlg = new ShowProjects();
-        //    dlg.ShowDialog();
-        //}
+        }
+
+        private void lbl_num_projects_DoubleClick(object sender, EventArgs e)
+        {
+            ShowProjects dlg = new ShowProjects();
+            dlg.ShowDialog();
+        }
 
 
     }
