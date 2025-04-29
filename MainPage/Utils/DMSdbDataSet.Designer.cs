@@ -2339,7 +2339,6 @@ namespace dms.pages.Utils {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public mass_projectRow Addmass_projectRow(
-                        int id, 
                         string name, 
                         int type, 
                         int prototype, 
@@ -2359,7 +2358,7 @@ namespace dms.pages.Utils {
                         int custom_stp) {
                 mass_projectRow rowmass_projectRow = ((mass_projectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
+                        null,
                         name,
                         type,
                         prototype,
@@ -2467,6 +2466,8 @@ namespace dms.pages.Utils {
                 base.Columns.Add(this.columncustom_stp);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnname.AllowDBNull = false;
@@ -2489,6 +2490,8 @@ namespace dms.pages.Utils {
                 this.columnBgb.AllowDBNull = false;
                 this.columnHgb.AllowDBNull = false;
                 this.columncustom_stp_m.AllowDBNull = false;
+                this.columncustom_stp_z.AllowDBNull = false;
+                this.columncustom_stp.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4688,12 +4691,7 @@ namespace dms.pages.Utils {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal custom_stp_z {
                 get {
-                    try {
-                        return ((decimal)(this[this.tablemass_project.custom_stp_zColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'custom_stp_z\' в таблице \'mass_project\' равно DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tablemass_project.custom_stp_zColumn]));
                 }
                 set {
                     this[this.tablemass_project.custom_stp_zColumn] = value;
@@ -4704,40 +4702,11 @@ namespace dms.pages.Utils {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int custom_stp {
                 get {
-                    try {
-                        return ((int)(this[this.tablemass_project.custom_stpColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'custom_stp\' в таблице \'mass_project\' равно DBNull.", e);
-                    }
+                    return ((int)(this[this.tablemass_project.custom_stpColumn]));
                 }
                 set {
                     this[this.tablemass_project.custom_stpColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscustom_stp_zNull() {
-                return this.IsNull(this.tablemass_project.custom_stp_zColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcustom_stp_zNull() {
-                this[this.tablemass_project.custom_stp_zColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscustom_stpNull() {
-                return this.IsNull(this.tablemass_project.custom_stpColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcustom_stpNull() {
-                this[this.tablemass_project.custom_stpColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7882,94 +7851,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
             tableMapping.ColumnMappings.Add("custom_stp_z", "custom_stp_z");
             tableMapping.ColumnMappings.Add("custom_stp", "custom_stp");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMSdb"".""public"".""mass_project"" WHERE ((""id"" = ?) AND (""name"" = ?) AND (""type"" = ?) AND (""prototype"" = ?) AND (""description"" = ?) AND (""shiptype"" = ?) AND (""mute"" = ?) AND (""master"" = ?) AND (""project_group"" = ?) AND (""num_type1"" = ?) AND (""num_type2"" = ?) AND (""deleted"" = ?) AND (""Lgb"" = ?) AND (""Bgb"" = ?) AND (""Hgb"" = ?) AND (""custom_stp_m"" = ?) AND ((? = 1 AND ""custom_stp_z"" IS NULL) OR (""custom_stp_z"" = ?)) AND ((? = 1 AND ""custom_stp"" IS NULL) OR (""custom_stp"" = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_type", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_prototype", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prototype", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_shiptype", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "shiptype", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_mute", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mute", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_master", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "master", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_project_group", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_group", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_num_type1", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_num_type2", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type2", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_deleted", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deleted", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Lgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Lgb", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Bgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Bgb", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Hgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Hgb", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_custom_stp_m", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_m", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_custom_stp_z", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp_z", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_custom_stp_z", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_z", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_custom_stp", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_custom_stp", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""DMSdb"".""public"".""mass_project"" (""id"", ""name"", ""type"", ""prototype"", ""description"", ""shiptype"", ""mute"", ""master"", ""project_group"", ""num_type1"", ""num_type2"", ""deleted"", ""Lgb"", ""Bgb"", ""Hgb"", ""custom_stp_m"", ""custom_stp_z"", ""custom_stp"") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("type", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("prototype", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prototype", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("shiptype", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "shiptype", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mute", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mute", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("master", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "master", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("project_group", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_group", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("num_type1", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("num_type2", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type2", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("deleted", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deleted", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Lgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Lgb", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Bgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Bgb", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Hgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Hgb", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("custom_stp_m", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_m", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("custom_stp_z", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_z", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("custom_stp", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMSdb"".""public"".""mass_project"" SET ""id"" = ?, ""name"" = ?, ""type"" = ?, ""prototype"" = ?, ""description"" = ?, ""shiptype"" = ?, ""mute"" = ?, ""master"" = ?, ""project_group"" = ?, ""num_type1"" = ?, ""num_type2"" = ?, ""deleted"" = ?, ""Lgb"" = ?, ""Bgb"" = ?, ""Hgb"" = ?, ""custom_stp_m"" = ?, ""custom_stp_z"" = ?, ""custom_stp"" = ? WHERE ((""id"" = ?) AND (""name"" = ?) AND (""type"" = ?) AND (""prototype"" = ?) AND (""description"" = ?) AND (""shiptype"" = ?) AND (""mute"" = ?) AND (""master"" = ?) AND (""project_group"" = ?) AND (""num_type1"" = ?) AND (""num_type2"" = ?) AND (""deleted"" = ?) AND (""Lgb"" = ?) AND (""Bgb"" = ?) AND (""Hgb"" = ?) AND (""custom_stp_m"" = ?) AND ((? = 1 AND ""custom_stp_z"" IS NULL) OR (""custom_stp_z"" = ?)) AND ((? = 1 AND ""custom_stp"" IS NULL) OR (""custom_stp"" = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("type", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("prototype", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prototype", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("shiptype", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "shiptype", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mute", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mute", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("master", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "master", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("project_group", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_group", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("num_type1", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("num_type2", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type2", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("deleted", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deleted", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Lgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Lgb", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Bgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Bgb", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Hgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Hgb", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("custom_stp_m", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_m", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("custom_stp_z", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_z", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("custom_stp", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_id", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_type", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_prototype", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prototype", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_description", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_shiptype", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "shiptype", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_mute", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mute", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_master", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "master", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_project_group", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "project_group", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_num_type1", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_num_type2", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "num_type2", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_deleted", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deleted", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Lgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Lgb", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Bgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Bgb", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Hgb", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "Hgb", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_custom_stp_m", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_m", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_custom_stp_z", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp_z", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_custom_stp_z", global::System.Data.Odbc.OdbcType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(9)), ((byte)(3)), "custom_stp_z", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_custom_stp", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_custom_stp", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "custom_stp", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7987,11 +7868,13 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"id\", \"name\", \"type\", \"prototype\", \"description\", \"shiptype\", \"mute\", \"mas" +
                 "ter\", \"project_group\", \"num_type1\", \"num_type2\", \"deleted\", \"Lgb\", \"Bgb\", \"Hgb\"," +
-                " \"custom_stp_m\", \"custom_stp_z\", \"custom_stp\" FROM \"public\".\"mass_project\"";
+                " \"custom_stp_m\", \"custom_stp_z\", \"custom_stp\" FROM \"public\".\"mass_project\" where" +
+                " deleted = 0";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO mass_project SET name=\\\'новый проект\\\'";
+            this._commandCollection[1].CommandText = "INSERT INTO \"public\".mass_project\r\n                         (name)\r\nVALUES       " +
+                " (\'новый проект\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -8036,469 +7919,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DMSdbDataSet.mass_projectDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DMSdbDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "mass_project");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    int Original_id, 
-                    string Original_name, 
-                    int Original_type, 
-                    string Original_prototype, 
-                    string Original_description, 
-                    string Original_shiptype, 
-                    string Original_mute, 
-                    string Original_master, 
-                    int Original_project_group, 
-                    string Original_num_type1, 
-                    string Original_num_type2, 
-                    int Original_deleted, 
-                    decimal Original_Lgb, 
-                    decimal Original_Bgb, 
-                    decimal Original_Hgb, 
-                    decimal Original_custom_stp_m, 
-                    decimal Original_custom_stp_z, 
-                    string Original_custom_stp) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_name == null)) {
-                throw new global::System.ArgumentNullException("Original_name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_name));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_type));
-            if ((Original_prototype == null)) {
-                throw new global::System.ArgumentNullException("Original_prototype");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_prototype));
-            }
-            if ((Original_description == null)) {
-                throw new global::System.ArgumentNullException("Original_description");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_description));
-            }
-            if ((Original_shiptype == null)) {
-                throw new global::System.ArgumentNullException("Original_shiptype");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_shiptype));
-            }
-            if ((Original_mute == null)) {
-                throw new global::System.ArgumentNullException("Original_mute");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_mute));
-            }
-            if ((Original_master == null)) {
-                throw new global::System.ArgumentNullException("Original_master");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_master));
-            }
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_project_group));
-            if ((Original_num_type1 == null)) {
-                throw new global::System.ArgumentNullException("Original_num_type1");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_num_type1));
-            }
-            if ((Original_num_type2 == null)) {
-                throw new global::System.ArgumentNullException("Original_num_type2");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_num_type2));
-            }
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_deleted));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_Lgb));
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((decimal)(Original_Bgb));
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original_Hgb));
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((decimal)(Original_custom_stp_m));
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original_custom_stp_z));
-            if ((Original_custom_stp == null)) {
-                throw new global::System.ArgumentNullException("Original_custom_stp");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_custom_stp));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    int id, 
-                    string name, 
-                    int type, 
-                    string prototype, 
-                    string description, 
-                    string shiptype, 
-                    string mute, 
-                    string master, 
-                    int project_group, 
-                    string num_type1, 
-                    string num_type2, 
-                    int deleted, 
-                    decimal Lgb, 
-                    decimal Bgb, 
-                    decimal Hgb, 
-                    decimal custom_stp_m, 
-                    decimal custom_stp_z, 
-                    string custom_stp) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(name));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(type));
-            if ((prototype == null)) {
-                throw new global::System.ArgumentNullException("prototype");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(prototype));
-            }
-            if ((description == null)) {
-                throw new global::System.ArgumentNullException("description");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(description));
-            }
-            if ((shiptype == null)) {
-                throw new global::System.ArgumentNullException("shiptype");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(shiptype));
-            }
-            if ((mute == null)) {
-                throw new global::System.ArgumentNullException("mute");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(mute));
-            }
-            if ((master == null)) {
-                throw new global::System.ArgumentNullException("master");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(master));
-            }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(project_group));
-            if ((num_type1 == null)) {
-                throw new global::System.ArgumentNullException("num_type1");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(num_type1));
-            }
-            if ((num_type2 == null)) {
-                throw new global::System.ArgumentNullException("num_type2");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(num_type2));
-            }
-            this.Adapter.InsertCommand.Parameters[11].Value = ((int)(deleted));
-            this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(Lgb));
-            this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(Bgb));
-            this.Adapter.InsertCommand.Parameters[14].Value = ((decimal)(Hgb));
-            this.Adapter.InsertCommand.Parameters[15].Value = ((decimal)(custom_stp_m));
-            this.Adapter.InsertCommand.Parameters[16].Value = ((decimal)(custom_stp_z));
-            if ((custom_stp == null)) {
-                throw new global::System.ArgumentNullException("custom_stp");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(custom_stp));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int id, 
-                    string name, 
-                    int type, 
-                    string prototype, 
-                    string description, 
-                    string shiptype, 
-                    string mute, 
-                    string master, 
-                    int project_group, 
-                    string num_type1, 
-                    string num_type2, 
-                    int deleted, 
-                    decimal Lgb, 
-                    decimal Bgb, 
-                    decimal Hgb, 
-                    decimal custom_stp_m, 
-                    decimal custom_stp_z, 
-                    string custom_stp, 
-                    int Original_id, 
-                    string Original_name, 
-                    int Original_type, 
-                    string Original_prototype, 
-                    string Original_description, 
-                    string Original_shiptype, 
-                    string Original_mute, 
-                    string Original_master, 
-                    int Original_project_group, 
-                    string Original_num_type1, 
-                    string Original_num_type2, 
-                    int Original_deleted, 
-                    decimal Original_Lgb, 
-                    decimal Original_Bgb, 
-                    decimal Original_Hgb, 
-                    decimal Original_custom_stp_m, 
-                    decimal Original_custom_stp_z, 
-                    string Original_custom_stp) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(name));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(type));
-            if ((prototype == null)) {
-                throw new global::System.ArgumentNullException("prototype");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(prototype));
-            }
-            if ((description == null)) {
-                throw new global::System.ArgumentNullException("description");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(description));
-            }
-            if ((shiptype == null)) {
-                throw new global::System.ArgumentNullException("shiptype");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(shiptype));
-            }
-            if ((mute == null)) {
-                throw new global::System.ArgumentNullException("mute");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(mute));
-            }
-            if ((master == null)) {
-                throw new global::System.ArgumentNullException("master");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(master));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(project_group));
-            if ((num_type1 == null)) {
-                throw new global::System.ArgumentNullException("num_type1");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(num_type1));
-            }
-            if ((num_type2 == null)) {
-                throw new global::System.ArgumentNullException("num_type2");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(num_type2));
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(deleted));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Lgb));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Bgb));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Hgb));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(custom_stp_m));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(custom_stp_z));
-            if ((custom_stp == null)) {
-                throw new global::System.ArgumentNullException("custom_stp");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(custom_stp));
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_id));
-            if ((Original_name == null)) {
-                throw new global::System.ArgumentNullException("Original_name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_name));
-            }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_type));
-            if ((Original_prototype == null)) {
-                throw new global::System.ArgumentNullException("Original_prototype");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_prototype));
-            }
-            if ((Original_description == null)) {
-                throw new global::System.ArgumentNullException("Original_description");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_description));
-            }
-            if ((Original_shiptype == null)) {
-                throw new global::System.ArgumentNullException("Original_shiptype");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_shiptype));
-            }
-            if ((Original_mute == null)) {
-                throw new global::System.ArgumentNullException("Original_mute");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_mute));
-            }
-            if ((Original_master == null)) {
-                throw new global::System.ArgumentNullException("Original_master");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_master));
-            }
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_project_group));
-            if ((Original_num_type1 == null)) {
-                throw new global::System.ArgumentNullException("Original_num_type1");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_num_type1));
-            }
-            if ((Original_num_type2 == null)) {
-                throw new global::System.ArgumentNullException("Original_num_type2");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_num_type2));
-            }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_deleted));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original_Lgb));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(Original_Bgb));
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original_Hgb));
-            this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(Original_custom_stp_m));
-            this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(Original_custom_stp_z));
-            if ((Original_custom_stp == null)) {
-                throw new global::System.ArgumentNullException("Original_custom_stp");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_custom_stp));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string name, 
-                    int type, 
-                    string prototype, 
-                    string description, 
-                    string shiptype, 
-                    string mute, 
-                    string master, 
-                    int project_group, 
-                    string num_type1, 
-                    string num_type2, 
-                    int deleted, 
-                    decimal Lgb, 
-                    decimal Bgb, 
-                    decimal Hgb, 
-                    decimal custom_stp_m, 
-                    decimal custom_stp_z, 
-                    string custom_stp, 
-                    int Original_id, 
-                    string Original_name, 
-                    int Original_type, 
-                    string Original_prototype, 
-                    string Original_description, 
-                    string Original_shiptype, 
-                    string Original_mute, 
-                    string Original_master, 
-                    int Original_project_group, 
-                    string Original_num_type1, 
-                    string Original_num_type2, 
-                    int Original_deleted, 
-                    decimal Original_Lgb, 
-                    decimal Original_Bgb, 
-                    decimal Original_Hgb, 
-                    decimal Original_custom_stp_m, 
-                    decimal Original_custom_stp_z, 
-                    string Original_custom_stp) {
-            return this.Update(Original_id, name, type, prototype, description, shiptype, mute, master, project_group, num_type1, num_type2, deleted, Lgb, Bgb, Hgb, custom_stp_m, custom_stp_z, custom_stp, Original_id, Original_name, Original_type, Original_prototype, Original_description, Original_shiptype, Original_mute, Original_master, Original_project_group, Original_num_type1, Original_num_type2, Original_deleted, Original_Lgb, Original_Bgb, Original_Hgb, Original_custom_stp_m, Original_custom_stp_z, Original_custom_stp);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10013,8 +9433,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
         
         private mass_main_tabTableAdapter _mass_main_tabTableAdapter;
         
-        private mass_projectTableAdapter _mass_projectTableAdapter;
-        
         private mass_stp_21TableAdapter _mass_stp_21TableAdapter;
         
         private mass_text_codeTableAdapter _mass_text_codeTableAdapter;
@@ -10097,20 +9515,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public mass_projectTableAdapter mass_projectTableAdapter {
-            get {
-                return this._mass_projectTableAdapter;
-            }
-            set {
-                this._mass_projectTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public mass_stp_21TableAdapter mass_stp_21TableAdapter {
             get {
                 return this._mass_stp_21TableAdapter;
@@ -10183,10 +9587,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                             && (this._mass_main_tabTableAdapter.Connection != null))) {
                     return this._mass_main_tabTableAdapter.Connection;
                 }
-                if (((this._mass_projectTableAdapter != null) 
-                            && (this._mass_projectTableAdapter.Connection != null))) {
-                    return this._mass_projectTableAdapter.Connection;
-                }
                 if (((this._mass_stp_21TableAdapter != null) 
                             && (this._mass_stp_21TableAdapter.Connection != null))) {
                     return this._mass_stp_21TableAdapter.Connection;
@@ -10224,9 +9624,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                 if ((this._mass_main_tabTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._mass_projectTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._mass_stp_21TableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -10253,15 +9650,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._mass_stp_21TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._mass_projectTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.mass_project.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._mass_projectTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -10334,14 +9722,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._mass_stp_21TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._mass_projectTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.mass_project.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._mass_projectTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -10451,14 +9831,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._mass_projectTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.mass_project.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._mass_projectTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._mass_stp_21TableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.mass_stp_21.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -10523,11 +9895,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
             }
             if (((this._mass_main_tabTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._mass_main_tabTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
-                        "r, должны использовать одинаковую строку подключения.");
-            }
-            if (((this._mass_projectTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._mass_projectTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -10612,15 +9979,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                     if (this._mass_main_tabTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._mass_main_tabTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._mass_main_tabTableAdapter.Adapter);
-                    }
-                }
-                if ((this._mass_projectTableAdapter != null)) {
-                    revertConnections.Add(this._mass_projectTableAdapter, this._mass_projectTableAdapter.Connection);
-                    this._mass_projectTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
-                    this._mass_projectTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
-                    if (this._mass_projectTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._mass_projectTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._mass_projectTableAdapter.Adapter);
                     }
                 }
                 if ((this._mass_stp_21TableAdapter != null)) {
@@ -10723,10 +10081,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)";
                 if ((this._mass_main_tabTableAdapter != null)) {
                     this._mass_main_tabTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._mass_main_tabTableAdapter]));
                     this._mass_main_tabTableAdapter.Transaction = null;
-                }
-                if ((this._mass_projectTableAdapter != null)) {
-                    this._mass_projectTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._mass_projectTableAdapter]));
-                    this._mass_projectTableAdapter.Transaction = null;
                 }
                 if ((this._mass_stp_21TableAdapter != null)) {
                     this._mass_stp_21TableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._mass_stp_21TableAdapter]));

@@ -108,8 +108,8 @@ namespace dms.pages.Main
             : base(o, name)
         {
             InitializeComponent();
-            ta_variants.Connection.ConnectionString = MysglConString;
-            ta_stp.Connection.ConnectionString = MysglConString;
+            //ta_variants.Connection.ConnectionString = MysglConString;
+            //ta_stp.Connection.ConnectionString = MysglConString;
         }
 
         new private void InitializeComponent()
@@ -265,7 +265,7 @@ namespace dms.pages.Main
             // lbl_num_projects
             // 
             this.lbl_num_projects.Location = new System.Drawing.Point(235, 30);
-            //this.lbl_num_projects.DoubleClick += new System.EventHandler(this.lbl_num_projects_DoubleClick);
+            this.lbl_num_projects.DoubleClick += new System.EventHandler(this.lbl_num_projects_DoubleClick);
             // 
             // label17
             // 
@@ -606,7 +606,7 @@ namespace dms.pages.Main
             this.btn_psave.TabIndex = 11;
             this.btn_psave.Text = "Сохранить";
             this.btn_psave.UseVisualStyleBackColor = true;
-            //this.btn_psave.Click += new System.EventHandler(this.btn_psave_Click);
+            this.btn_psave.Click += new System.EventHandler(this.btn_psave_Click);
             // 
             // btn_pdelete
             // 
@@ -616,7 +616,7 @@ namespace dms.pages.Main
             this.btn_pdelete.TabIndex = 10;
             this.btn_pdelete.Text = "Удалить";
             this.btn_pdelete.UseVisualStyleBackColor = true;
-            //this.btn_pdelete.Click += new System.EventHandler(this.btn_pdelete_Click);
+            this.btn_pdelete.Click += new System.EventHandler(this.btn_pdelete_Click);
             // 
             // btn_padd
             // 
@@ -626,7 +626,7 @@ namespace dms.pages.Main
             this.btn_padd.TabIndex = 9;
             this.btn_padd.Text = "Добавить";
             this.btn_padd.UseVisualStyleBackColor = true;
-            //this.btn_padd.Click += new System.EventHandler(this.btn_padd_Click);
+            this.btn_padd.Click += new System.EventHandler(this.btn_padd_Click);
             // 
             // cb_pmasters
             // 
@@ -1392,7 +1392,7 @@ namespace dms.pages.Main
             row.BeginEdit();
             row.deleted = 1;
             row.EndEdit();
-            ta_projects.Update(row);
+            //ta_projects.Update((DMSdbDataSet.mass_projectRow)row);
             ta_projects.Fill(dt_projects);
             ApplyProjectFilter(cb_pgroup, cb_projects, dt_projects, chk_myprojects.Checked);
             FillProjectForm();
@@ -1425,7 +1425,7 @@ namespace dms.pages.Main
             {
                 DmsMsgBoxs.OkFail(ex.Message);
             }
-            int i = ta_projects.Update(row);
+            //int i = ta_projects.Update(row);
         }
 
         private void btn_alldata_Click(object sender, EventArgs e)
@@ -1485,7 +1485,7 @@ namespace dms.pages.Main
 
         private void btn_calc_Click(object sender, EventArgs e)
         {
-            CalcEntry();
+            //CalcEntry();
         }
 
         private void btn_calc2_Click(object sender, EventArgs e)

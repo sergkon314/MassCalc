@@ -307,7 +307,7 @@ namespace dms.pages.Main
             return cb_target.Items.Count;
         }
 
-        protected virtual DMSdbDataSet.mass_projectRow GetSelectedProject()
+        protected virtual DMSdbDataSet.mass_projectRow  GetSelectedProject()
         {
             return cb_projects.SelectedItem as DMSdbDataSet.mass_projectRow;
         }

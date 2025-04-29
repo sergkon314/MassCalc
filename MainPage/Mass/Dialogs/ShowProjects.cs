@@ -11,7 +11,7 @@ using dms.pages.Utils;
 namespace dms.pages.Mass.Dialogs
 {
     public partial class ShowProjects : Form
-    {
+    {   
         public ShowProjects()
         {
             InitializeComponent();
@@ -103,7 +103,7 @@ namespace dms.pages.Mass.Dialogs
             //DataRow row = this.dmsMass.mass_project.Rows[e.RowIndex];
             int d = row.deleted;
             int id = row.id;
-            int res = this.mass_projectTableAdapter.Update(row);
+            int res = 0; //this.mass_projectTableAdapter.Update(row.name, );
             string action = "";
             if (d == 0)
                 action = "активный";

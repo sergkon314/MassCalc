@@ -112,8 +112,8 @@ namespace dms.pages.Main
 
                 string code11 = "11000000";
                 string name_code = dt_codes.FindBycode(code11).code_name;
-                dt_result.Addmass_data_bidRow(code11, name_code, M11, X, Y, Z11);
-                dt_filling.Addmass_data_bidRow(code11, name_code, M11, X, Y, Z11);
+                Addmass_data_bidRow(ref dt_result, code11, name_code, (decimal)M11, (decimal)X, (decimal)Y, (decimal)Z11);
+                Addmass_data_bidRow(ref dt_filling, code11, name_code, M11, X, Y, Z11);
 
             }
             M += M11; Z += koeff_z;
@@ -125,8 +125,7 @@ namespace dms.pages.Main
 
                 string code0107 = "01070000";
                 string name_code = dt_codes.FindBycode(code0107).code_name;
-                dt_result.Addmass_data_bidRow(code0107, name_code, M0107, X, Y, Z0107);
-                //dt_filling.Addmass_data_bidRow(code0107, name_code, M0107, X, Y, Z0107);
+                Addmass_data_bidRow(ref dt_result, code0107, name_code, M0107, X, Y, Z0107);//dt_filling.Addmass_data_bidRow(code0107, name_code, M0107, X, Y, Z0107);
                 M = 0; X = 0; Y = 0; Z = 0; Mx = 0; My = 0; Mz = 0;
                 rows = dt_result.Select("code='01000000'") as DR[];
                 if (rows.Length > 0)
@@ -148,7 +147,7 @@ namespace dms.pages.Main
                     Y = (float)(My / M);
                     Z = (float)(Mz / M);
                     string nameCode = dt_codes.FindBycode("01000000").code_name;
-                    dt_result.Addmass_data_bidRow("01000000", nameCode, M, X, Y, Z);
+                    Addmass_data_bidRow(ref dt_result, "01000000", nameCode, M, X, Y, Z);
                 }
                 M = 0; X = 0; Y = 0; Z = 0; Mx = 0; My = 0; Mz = 0;
                 rows = dt_filling.Select("code='01000000'") as DR[];
@@ -171,8 +170,7 @@ namespace dms.pages.Main
                     Y = (float)(My / M);
                     Z = (float)(Mz / M);
                     string nameCode = dt_codes.FindBycode("01000000").code_name;
-                    DMSdbDataSet.mass_data_bidRow res = new DMSdbDataSet.mass_data_bidRow(new DataRow("01000000", nameCode, M, X, Y, Z));
-                    dt_filling.Addmass_data_bidRow();
+                    Addmass_data_bidRow(ref dt_filling, "01000000", nameCode, M, X, Y, Z);
                 }
 
             }
@@ -191,7 +189,7 @@ namespace dms.pages.Main
             DT tmp = GetNewDT();
             foreach (DR r in rows)
             {
-                tmp.Addmass_data_bidRow(r.code, r.name_code, r.m, r.x, r.y, r.z);
+                Addmass_data_bidRow(ref tmp, r.code, r.name_code, r.m, r.x, r.y, r.z);
             }
             return CalcSum(ref tmp);
         }
@@ -230,7 +228,7 @@ namespace dms.pages.Main
                         if (code == "13000000" && i == 1) koeff *= mute;
                         if (koeff != 0)
                         {
-                            dt.Addmass_data_bidRow(r.code, r.name_code, (float)r.m * koeff, r.x, r.y, r.z);
+                            Addmass_data_bidRow(ref dt, r.code, r.name_code, (decimal)(r.m * (decimal)koeff), r.x, r.y, r.z);
                         }
                     }
                 }
@@ -258,7 +256,7 @@ namespace dms.pages.Main
                 {
                     if (v.code == r.code)
                     {
-                        tmp.Addmass_data_bidRow(r.code, r.name_code, r.m, r.x, r.y, r.z);
+                        Addmass_data_bidRow(ref tmp, r.code, r.name_code, r.m, r.x, r.y, r.z);
                     }
                 }
             }
@@ -286,21 +284,21 @@ namespace dms.pages.Main
                     {
                         string code_with_end = code + end;
                         string name_code = dt_codes.FindBycode(code_with_end).code_name;
-                        tmp.Addmass_data_bidRow(code_with_end, name_code, r.m, r.x, r.y, r.z);
+                        Addmass_data_bidRow(ref tmp, code_with_end, name_code, r.m, r.x, r.y, r.z);
                         src.Rows.Remove(r);
                     }
                     else
                     {
                         DR[] rows_with_end = dst.Select("code = '" + r.code + "'") as DR[];
                         if (rows_with_end.Length == 0)
-                            tmp.Addmass_data_bidRow(r.code, r.name_code, r.m, r.x, r.y, r.z);
+                            Addmass_data_bidRow(ref tmp, r.code, r.name_code, r.m, r.x, r.y, r.z);
                         src.Rows.Remove(r);
                     } /**/
                 }
             }
             foreach (DR r in tmp)
             {
-                dst.Addmass_data_bidRow(r.code, r.name_code, r.m, r.x, r.y, r.z);
+                Addmass_data_bidRow(ref tmp, r.code, r.name_code, r.m, r.x, r.y, r.z);
             }
             src.Dispose();
             return dst.Copy() as DT;
@@ -340,7 +338,9 @@ namespace dms.pages.Main
             //	Z = 0;
             //}
             string name_code = dt_codes.FindBycode(code).code_name;
-            DR row = tmp.Addmass_data_bidRow(code, name_code, M, X, Y, Z);
+            //DR row = tmp.Addmass_data_bidRow(code, name_code, M, X, Y, Z);
+            Addmass_data_bidRow(ref tmp, code, name_code, M, X, Y, Z);
+
         }
         private DT GetNewDT()
         {
@@ -351,5 +351,14 @@ namespace dms.pages.Main
             return dt;
         }
 
+        private DR Addmass_data_bidRow(ref DT dt, string code, string name_code, decimal M, decimal X, decimal Y, decimal Z)
+        {
+            return dt.Addmass_data_bidRow(0, 0, code, name_code, (decimal)M, (decimal)X, (decimal)Y, (decimal)Z, (decimal)0, (decimal)0, (decimal)0);
+        }
+
+        private DR Addmass_data_bidRow(ref DT dt, string code, string name_code, float M, float X, float Y, float Z)
+        {
+            return dt.Addmass_data_bidRow(0, 0, code, name_code, (decimal)M, (decimal)X, (decimal)Y, (decimal)Z, (decimal)0, (decimal)0, (decimal)0);
+        }
     }
 }

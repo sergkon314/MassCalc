@@ -119,6 +119,12 @@
     <Compile Include="Mass\MassBids.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Mass\MassCalc.Calc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mass\MassCalc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Mass\VariantsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
