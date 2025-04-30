@@ -298,7 +298,7 @@ namespace dms.pages.Main
             }
             foreach (DR r in tmp)
             {
-                Addmass_data_bidRow(ref tmp, r.code, r.name_code, r.m, r.x, r.y, r.z);
+                dst.Addmass_data_bidRow(0, r.code, r.name_code, r.m, r.x, r.y, r.z, 0, 0, 0);
             }
             src.Dispose();
             return dst.Copy() as DT;
@@ -353,12 +353,12 @@ namespace dms.pages.Main
 
         private DR Addmass_data_bidRow(ref DT dt, string code, string name_code, decimal M, decimal X, decimal Y, decimal Z)
         {
-            return dt.Addmass_data_bidRow(0, 0, code, name_code, (decimal)M, (decimal)X, (decimal)Y, (decimal)Z, (decimal)0, (decimal)0, (decimal)0);
+            return dt.Addmass_data_bidRow(0, code, name_code, (decimal)M, (decimal)X, (decimal)Y, (decimal)Z, (decimal)0, (decimal)0, (decimal)0);
         }
 
         private DR Addmass_data_bidRow(ref DT dt, string code, string name_code, float M, float X, float Y, float Z)
         {
-            return dt.Addmass_data_bidRow(0, 0, code, name_code, (decimal)M, (decimal)X, (decimal)Y, (decimal)Z, (decimal)0, (decimal)0, (decimal)0);
+            return dt.Addmass_data_bidRow(0, code, name_code, (decimal)M, (decimal)X, (decimal)Y, (decimal)Z, (decimal)0, (decimal)0, (decimal)0);
         }
     }
 }

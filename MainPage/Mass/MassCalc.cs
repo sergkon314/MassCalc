@@ -690,7 +690,7 @@ namespace dms.pages.Main
             this.btn_report1.TabIndex = 7;
             this.btn_report1.Text = "Отчет";
             this.btn_report1.UseVisualStyleBackColor = true;
-            //this.btn_report1.Click += new System.EventHandler(this.btn_report1_Click);
+            this.btn_report1.Click += new System.EventHandler(this.btn_report1_Click);
             // 
             // btn_calc
             // 
@@ -700,7 +700,7 @@ namespace dms.pages.Main
             this.btn_calc.TabIndex = 6;
             this.btn_calc.Text = "Расчет";
             this.btn_calc.UseVisualStyleBackColor = true;
-            //this.btn_calc.Click += new System.EventHandler(this.btn_calc_Click);
+            this.btn_calc.Click += new System.EventHandler(this.btn_calc_Click);
             // 
             // btn_alldata
             // 
@@ -710,7 +710,7 @@ namespace dms.pages.Main
             this.btn_alldata.TabIndex = 5;
             this.btn_alldata.Text = "Сводная";
             this.btn_alldata.UseVisualStyleBackColor = true;
-            //this.btn_alldata.Click += new System.EventHandler(this.btn_alldata_Click);
+            this.btn_alldata.Click += new System.EventHandler(this.btn_alldata_Click);
             // 
             // groupBox6
             // 
@@ -1113,7 +1113,7 @@ namespace dms.pages.Main
             this.btn_editstp.TabIndex = 7;
             this.btn_editstp.Text = "СТП";
             this.btn_editstp.UseVisualStyleBackColor = true;
-            //this.btn_editstp.Click += new System.EventHandler(this.btn_editstp_Click);
+            this.btn_editstp.Click += new System.EventHandler(this.btn_editstp_Click);
             // 
             // btn_report2
             // 
@@ -1133,7 +1133,7 @@ namespace dms.pages.Main
             this.btn_calc2.TabIndex = 5;
             this.btn_calc2.Text = "Расчет";
             this.btn_calc2.UseVisualStyleBackColor = true;
-            //this.btn_calc2.Click += new System.EventHandler(this.btn_calc2_Click);
+            this.btn_calc2.Click += new System.EventHandler(this.btn_calc2_Click);
             // 
             // chk_claim3
             // 
@@ -1485,7 +1485,7 @@ namespace dms.pages.Main
 
         private void btn_calc_Click(object sender, EventArgs e)
         {
-            //CalcEntry();
+            CalcEntry();
         }
 
         private void btn_calc2_Click(object sender, EventArgs e)
@@ -1493,10 +1493,10 @@ namespace dms.pages.Main
             FillingCalcEntry();
         }
 
-        //private void btn_report1_Click(object sender, EventArgs e)
-        //{
-        //    Report1Entry();
-        //}
+        private void btn_report1_Click(object sender, EventArgs e)
+        {
+            Report1Entry();
+        }
 
         //private void btn_report2_Click(object sender, EventArgs e)
         //{
