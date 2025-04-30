@@ -59,14 +59,14 @@
             // 
             this.page1ToolStripMenuItem.Name = "page1ToolStripMenuItem";
             this.page1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.page1ToolStripMenuItem.Text = "item1";
+            this.page1ToolStripMenuItem.Text = "MassBids";
             this.page1ToolStripMenuItem.Click += new System.EventHandler(this.page1ToolStripMenuItem_Click);
             // 
             // page2ToolStripMenuItem
             // 
             this.page2ToolStripMenuItem.Name = "page2ToolStripMenuItem";
             this.page2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.page2ToolStripMenuItem.Text = "item2";
+            this.page2ToolStripMenuItem.Text = "MassCalc";
             this.page2ToolStripMenuItem.Click += new System.EventHandler(this.page2ToolStripMenuItem_Click);
             // 
             // panel
