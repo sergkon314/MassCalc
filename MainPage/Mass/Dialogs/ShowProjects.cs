@@ -103,7 +103,8 @@ namespace dms.pages.Mass.Dialogs
             //DataRow row = this.dmsMass.mass_project.Rows[e.RowIndex];
             int d = row.deleted;
             int id = row.id;
-            int res = 0; //this.mass_projectTableAdapter.Update(row.name, );
+            int res = 0;
+            //this.mass_projectTableAdapter.Update1(row.name, row.id);
             string action = "";
             if (d == 0)
                 action = "активный";

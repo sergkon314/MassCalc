@@ -1356,9 +1356,9 @@ namespace dms.pages.Main
             rb_typeDock.Checked = p.num_type1 == 0;
             rb_proto0.Checked = p.prototype == 0;
             rb_proto1.Checked = p.prototype == 1;
-            txt_gbL.Text = p.Lgb.ToString();
-            txt_gbB.Text = p.Bgb.ToString();
-            txt_gbH.Text = p.Hgb.ToString();
+            txt_gbL.Text = p.lgb.ToString();
+            txt_gbB.Text = p.bgb.ToString();
+            txt_gbH.Text = p.hgb.ToString();
             chkCustomStp.Checked = p.custom_stp == 1;
             txtCustomM.Text = p.custom_stp_m.ToString();
             txtCustomZ.Text = p.custom_stp_z.ToString();
@@ -1392,7 +1392,7 @@ namespace dms.pages.Main
             row.BeginEdit();
             row.deleted = 1;
             row.EndEdit();
-            //ta_projects.Update((DMSdbDataSet.mass_projectRow)row);
+            ta_projects.Update((DMSdbDataSet.mass_projectRow)row);
             ta_projects.Fill(dt_projects);
             ApplyProjectFilter(cb_pgroup, cb_projects, dt_projects, chk_myprojects.Checked);
             FillProjectForm();
@@ -1413,9 +1413,9 @@ namespace dms.pages.Main
             row.deleted = chkActive.Checked ? 2 : 0;
             try
             {
-                row.Lgb = (decimal)Convert.ToSingle(txt_gbL.Text);
-                row.Bgb = (decimal)Convert.ToSingle(txt_gbB.Text);
-                row.Hgb = (decimal)Convert.ToSingle(txt_gbH.Text);
+                row.lgb = (decimal)Convert.ToSingle(txt_gbL.Text);
+                row.bgb = (decimal)Convert.ToSingle(txt_gbB.Text);
+                row.hgb = (decimal)Convert.ToSingle(txt_gbH.Text);
                 row.custom_stp = chkCustomStp.Checked ? (int)1 : 0;
                 row.custom_stp_m = (decimal)Convert.ToSingle(txtCustomM.Text);
                 row.custom_stp_z = (decimal)Convert.ToSingle(txtCustomZ.Text);
@@ -1425,7 +1425,7 @@ namespace dms.pages.Main
             {
                 DmsMsgBoxs.OkFail(ex.Message);
             }
-            //int i = ta_projects.Update(row);
+            int i = ta_projects.Update((DMSdbDataSet.mass_projectRow)row);
         }
 
         private void btn_alldata_Click(object sender, EventArgs e)

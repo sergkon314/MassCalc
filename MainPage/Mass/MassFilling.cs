@@ -80,6 +80,7 @@ namespace dms.pages.Main
             InitBidsDataDataGridView(dg_data);
 
         }
+
         protected virtual void MassFilling_Load(object sender, EventArgs e)
         {
             cb_pgroup.SelectedIndexChanged += new EventHandler(FilterProject);
@@ -247,9 +248,9 @@ namespace dms.pages.Main
             DMSdbDataSet.mass_projectRow row = GetSelectedProject();
             if (row == null)
                 return;
-            Lgb = (float)row.Lgb / 2;
-            Bgb = (float)row.Bgb / 2;
-            Hgb = (float)row.Hgb;
+            Lgb = (float)row.lgb / 2;
+            Bgb = (float)row.bgb / 2;
+            Hgb = (float)row.hgb;
             dt_bids = ta_bids.GetDataByProjectId(row.id);
             FillCustomFields(dt_bids);
             dg_bids.DataSource = dt_bids;

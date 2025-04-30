@@ -503,59 +503,6 @@ WHERE     (mass_project_id = ?) AND (claim = 3)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mass_projectTableAdapter" GeneratorDataComponentClassName="mass_projectTableAdapter" Name="mass_project" UserDataComponentName="mass_projectTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT "id", "name", "type", "prototype", "description", "shiptype", "mute", "master", "project_group", "num_type1", "num_type2", "deleted", "Lgb", "Bgb", "Hgb", "custom_stp_m", "custom_stp_z", "custom_stp" FROM "public"."mass_project" where deleted = 0</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="name" DataSetColumn="name" />
-              <Mapping SourceColumn="type" DataSetColumn="type" />
-              <Mapping SourceColumn="prototype" DataSetColumn="prototype" />
-              <Mapping SourceColumn="description" DataSetColumn="description" />
-              <Mapping SourceColumn="shiptype" DataSetColumn="shiptype" />
-              <Mapping SourceColumn="mute" DataSetColumn="mute" />
-              <Mapping SourceColumn="master" DataSetColumn="master" />
-              <Mapping SourceColumn="project_group" DataSetColumn="project_group" />
-              <Mapping SourceColumn="num_type1" DataSetColumn="num_type1" />
-              <Mapping SourceColumn="num_type2" DataSetColumn="num_type2" />
-              <Mapping SourceColumn="deleted" DataSetColumn="deleted" />
-              <Mapping SourceColumn="Lgb" DataSetColumn="Lgb" />
-              <Mapping SourceColumn="Bgb" DataSetColumn="Bgb" />
-              <Mapping SourceColumn="Hgb" DataSetColumn="Hgb" />
-              <Mapping SourceColumn="custom_stp_m" DataSetColumn="custom_stp_m" />
-              <Mapping SourceColumn="custom_stp_z" DataSetColumn="custom_stp_z" />
-              <Mapping SourceColumn="custom_stp" DataSetColumn="custom_stp" />
-            </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddProject" Modifier="Public" Name="AddProject" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AddProject">
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO "public".mass_project
-                         (name)
-VALUES        ('новый проект')</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </InsertCommand>
-              </DbSource>
-              <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAll" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillAll" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillAll">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        id, name, type, prototype, description, master, project_group, num_type1, num_type2, deleted, "Bgb", "Hgb", "Lgb", custom_stp, custom_stp_m, custom_stp_z 
-FROM mass_project ORDER BY name</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mass_stp_21TableAdapter" GeneratorDataComponentClassName="mass_stp_21TableAdapter" Name="mass_stp_21" UserDataComponentName="mass_stp_21TableAdapter">
             <MainSource>
               <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectName="DMSdb.mass_stp_21" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -837,6 +784,105 @@ FROM mass_project ORDER BY name</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mass_projectTableAdapter" GeneratorDataComponentClassName="mass_projectTableAdapter" Name="mass_project" UserDataComponentName="mass_projectTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "id", "name", "type", "prototype", "description", "shiptype", "mute", "master", "project_group", "num_type1", "num_type2", "deleted", "lgb", "bgb", "hgb", "custom_stp_m", "custom_stp_z", "custom_stp" FROM "public"."mass_project" where "deleted" &lt;&gt; 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       "public".mass_project
+SET                name = ?, type = ?, prototype = ?, description = ?, shiptype = ?, mute = ?, master = ?, project_group = ?, num_type1 = ?, num_type2 = ?, deleted = ?, lgb = ?, bgb = ?, hgb = ?, custom_stp_m = ?, custom_stp_z = ?, 
+                         custom_stp = ?
+WHERE        (id = ?) AND (name = ?) AND (type = ?) AND (prototype = ?) AND (description = ?) AND (shiptype = ?) AND (mute = ?) AND (master = ?) AND (project_group = ?) AND (num_type1 = ?) AND (num_type2 = ?) AND (deleted = ?) AND 
+                         (lgb = ?) AND (bgb = ?) AND (hgb = ?) AND (custom_stp_m = ?) AND (custom_stp_z = ?) AND (custom_stp = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="name" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="name" Precision="0" Scale="0" Size="1024" SourceColumn="name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="type" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="type" Precision="0" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="prototype" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="prototype" Precision="0" Scale="0" Size="0" SourceColumn="prototype" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param4" ColumnName="description" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="description" Precision="0" Scale="0" Size="1024" SourceColumn="description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param5" ColumnName="shiptype" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="shiptype" Precision="0" Scale="0" Size="1024" SourceColumn="shiptype" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param6" ColumnName="mute" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="mute" Precision="0" Scale="0" Size="1024" SourceColumn="mute" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param7" ColumnName="master" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="master" Precision="0" Scale="0" Size="1024" SourceColumn="master" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param8" ColumnName="project_group" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="project_group" Precision="0" Scale="0" Size="0" SourceColumn="project_group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param9" ColumnName="num_type1" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="num_type1" Precision="0" Scale="0" Size="0" SourceColumn="num_type1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param10" ColumnName="num_type2" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="num_type2" Precision="0" Scale="0" Size="0" SourceColumn="num_type2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param11" ColumnName="deleted" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="deleted" Precision="0" Scale="0" Size="0" SourceColumn="deleted" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param12" ColumnName="lgb" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="lgb" Precision="9" Scale="3" Size="0" SourceColumn="lgb" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param13" ColumnName="bgb" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="bgb" Precision="9" Scale="3" Size="0" SourceColumn="bgb" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param14" ColumnName="hgb" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="hgb" Precision="9" Scale="3" Size="0" SourceColumn="hgb" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param15" ColumnName="custom_stp_m" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="custom_stp_m" Precision="9" Scale="3" Size="0" SourceColumn="custom_stp_m" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param16" ColumnName="custom_stp_z" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="custom_stp_z" Precision="9" Scale="3" Size="0" SourceColumn="custom_stp_z" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param17" ColumnName="custom_stp" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="custom_stp" Precision="0" Scale="0" Size="0" SourceColumn="custom_stp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param18" ColumnName="id" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_id" Precision="0" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param19" ColumnName="name" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Original_name" Precision="0" Scale="0" Size="1024" SourceColumn="name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param20" ColumnName="type" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_type" Precision="0" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param21" ColumnName="prototype" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_prototype" Precision="0" Scale="0" Size="0" SourceColumn="prototype" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param22" ColumnName="description" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Original_description" Precision="0" Scale="0" Size="1024" SourceColumn="description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param23" ColumnName="shiptype" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Original_shiptype" Precision="0" Scale="0" Size="1024" SourceColumn="shiptype" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param24" ColumnName="mute" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Original_mute" Precision="0" Scale="0" Size="1024" SourceColumn="mute" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param25" ColumnName="master" DataSourceName="DMSdb.mass_project" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Original_master" Precision="0" Scale="0" Size="1024" SourceColumn="master" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param26" ColumnName="project_group" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_project_group" Precision="0" Scale="0" Size="0" SourceColumn="project_group" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param27" ColumnName="num_type1" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_num_type1" Precision="0" Scale="0" Size="0" SourceColumn="num_type1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param28" ColumnName="num_type2" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_num_type2" Precision="0" Scale="0" Size="0" SourceColumn="num_type2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param29" ColumnName="deleted" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_deleted" Precision="0" Scale="0" Size="0" SourceColumn="deleted" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param30" ColumnName="lgb" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="Original_lgb" Precision="9" Scale="3" Size="0" SourceColumn="lgb" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param31" ColumnName="bgb" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="Original_bgb" Precision="9" Scale="3" Size="0" SourceColumn="bgb" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param32" ColumnName="hgb" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="Original_hgb" Precision="9" Scale="3" Size="0" SourceColumn="hgb" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param33" ColumnName="custom_stp_m" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="Original_custom_stp_m" Precision="9" Scale="3" Size="0" SourceColumn="custom_stp_m" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param34" ColumnName="custom_stp_z" DataSourceName="DMSdb.mass_project" DataTypeServer="numeric" DbType="Decimal" Direction="Input" ParameterName="Original_custom_stp_z" Precision="9" Scale="3" Size="0" SourceColumn="custom_stp_z" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param35" ColumnName="custom_stp" DataSourceName="DMSdb.mass_project" DataTypeServer="int4" DbType="Int32" Direction="Input" ParameterName="Original_custom_stp" Precision="0" Scale="0" Size="0" SourceColumn="custom_stp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="prototype" DataSetColumn="prototype" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="shiptype" DataSetColumn="shiptype" />
+              <Mapping SourceColumn="mute" DataSetColumn="mute" />
+              <Mapping SourceColumn="master" DataSetColumn="master" />
+              <Mapping SourceColumn="project_group" DataSetColumn="project_group" />
+              <Mapping SourceColumn="num_type1" DataSetColumn="num_type1" />
+              <Mapping SourceColumn="num_type2" DataSetColumn="num_type2" />
+              <Mapping SourceColumn="deleted" DataSetColumn="deleted" />
+              <Mapping SourceColumn="lgb" DataSetColumn="lgb" />
+              <Mapping SourceColumn="bgb" DataSetColumn="bgb" />
+              <Mapping SourceColumn="hgb" DataSetColumn="hgb" />
+              <Mapping SourceColumn="custom_stp_m" DataSetColumn="custom_stp_m" />
+              <Mapping SourceColumn="custom_stp_z" DataSetColumn="custom_stp_z" />
+              <Mapping SourceColumn="custom_stp" DataSetColumn="custom_stp" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddProject" Modifier="Public" Name="AddProject" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AddProject">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO "public".mass_project
+                         (name)
+VALUES        ('новый проект')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DMSdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAll" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillAll" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillAll">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, name, type, prototype, description, master, project_group, num_type1, num_type2, deleted, "bgb", "hgb", "lgb", custom_stp, custom_stp_m, custom_stp_z 
+FROM mass_project ORDER BY name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -968,60 +1014,6 @@ FROM mass_project ORDER BY name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="mass_project" msprop:Generator_TableClassName="mass_projectDataTable" msprop:Generator_TableVarName="tablemass_project" msprop:Generator_TablePropName="mass_project" msprop:Generator_RowDeletingName="mass_projectRowDeleting" msprop:Generator_RowChangingName="mass_projectRowChanging" msprop:Generator_RowEvHandlerName="mass_projectRowChangeEventHandler" msprop:Generator_RowDeletedName="mass_projectRowDeleted" msprop:Generator_UserTableName="mass_project" msprop:Generator_RowChangedName="mass_projectRowChanged" msprop:Generator_RowEvArgName="mass_projectRowChangeEvent" msprop:Generator_RowClassName="mass_projectRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" type="xs:int" />
-              <xs:element name="prototype" msprop:Generator_ColumnVarNameInTable="columnprototype" msprop:Generator_ColumnPropNameInRow="prototype" msprop:Generator_ColumnPropNameInTable="prototypeColumn" msprop:Generator_UserColumnName="prototype" type="xs:int" />
-              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="shiptype" msprop:Generator_ColumnVarNameInTable="columnshiptype" msprop:Generator_ColumnPropNameInRow="shiptype" msprop:Generator_ColumnPropNameInTable="shiptypeColumn" msprop:Generator_UserColumnName="shiptype">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="mute" msprop:Generator_ColumnVarNameInTable="columnmute" msprop:Generator_ColumnPropNameInRow="mute" msprop:Generator_ColumnPropNameInTable="muteColumn" msprop:Generator_UserColumnName="mute">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="master" msprop:Generator_ColumnVarNameInTable="columnmaster" msprop:Generator_ColumnPropNameInRow="master" msprop:Generator_ColumnPropNameInTable="masterColumn" msprop:Generator_UserColumnName="master">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="project_group" msprop:Generator_ColumnVarNameInTable="columnproject_group" msprop:Generator_ColumnPropNameInRow="project_group" msprop:Generator_ColumnPropNameInTable="project_groupColumn" msprop:Generator_UserColumnName="project_group" type="xs:int" />
-              <xs:element name="num_type1" msprop:Generator_ColumnVarNameInTable="columnnum_type1" msprop:Generator_ColumnPropNameInRow="num_type1" msprop:Generator_ColumnPropNameInTable="num_type1Column" msprop:Generator_UserColumnName="num_type1" type="xs:int" />
-              <xs:element name="num_type2" msprop:Generator_ColumnVarNameInTable="columnnum_type2" msprop:Generator_ColumnPropNameInRow="num_type2" msprop:Generator_ColumnPropNameInTable="num_type2Column" msprop:Generator_UserColumnName="num_type2" type="xs:int" />
-              <xs:element name="deleted" msprop:Generator_ColumnVarNameInTable="columndeleted" msprop:Generator_ColumnPropNameInRow="deleted" msprop:Generator_ColumnPropNameInTable="deletedColumn" msprop:Generator_UserColumnName="deleted" type="xs:int" />
-              <xs:element name="Lgb" msprop:Generator_ColumnVarNameInTable="columnLgb" msprop:Generator_ColumnPropNameInRow="Lgb" msprop:Generator_ColumnPropNameInTable="LgbColumn" msprop:Generator_UserColumnName="Lgb" type="xs:decimal" />
-              <xs:element name="Bgb" msprop:Generator_ColumnVarNameInTable="columnBgb" msprop:Generator_ColumnPropNameInRow="Bgb" msprop:Generator_ColumnPropNameInTable="BgbColumn" msprop:Generator_UserColumnName="Bgb" type="xs:decimal" />
-              <xs:element name="Hgb" msprop:Generator_ColumnVarNameInTable="columnHgb" msprop:Generator_ColumnPropNameInRow="Hgb" msprop:Generator_ColumnPropNameInTable="HgbColumn" msprop:Generator_UserColumnName="Hgb" type="xs:decimal" />
-              <xs:element name="custom_stp_m" msprop:Generator_ColumnVarNameInTable="columncustom_stp_m" msprop:Generator_ColumnPropNameInRow="custom_stp_m" msprop:Generator_ColumnPropNameInTable="custom_stp_mColumn" msprop:Generator_UserColumnName="custom_stp_m" type="xs:decimal" />
-              <xs:element name="custom_stp_z" msprop:Generator_ColumnVarNameInTable="columncustom_stp_z" msprop:Generator_ColumnPropNameInRow="custom_stp_z" msprop:Generator_ColumnPropNameInTable="custom_stp_zColumn" msprop:Generator_UserColumnName="custom_stp_z" type="xs:decimal" />
-              <xs:element name="custom_stp" msprop:Generator_ColumnVarNameInTable="columncustom_stp" msprop:Generator_ColumnPropNameInRow="custom_stp" msprop:Generator_ColumnPropNameInTable="custom_stpColumn" msprop:Generator_UserColumnName="custom_stp" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="mass_stp_21" msprop:Generator_TableClassName="mass_stp_21DataTable" msprop:Generator_TableVarName="tablemass_stp_21" msprop:Generator_TablePropName="mass_stp_21" msprop:Generator_RowDeletingName="mass_stp_21RowDeleting" msprop:Generator_RowChangingName="mass_stp_21RowChanging" msprop:Generator_RowEvHandlerName="mass_stp_21RowChangeEventHandler" msprop:Generator_RowDeletedName="mass_stp_21RowDeleted" msprop:Generator_UserTableName="mass_stp_21" msprop:Generator_RowChangedName="mass_stp_21RowChanged" msprop:Generator_RowEvArgName="mass_stp_21RowChangeEvent" msprop:Generator_RowClassName="mass_stp_21Row">
           <xs:complexType>
             <xs:sequence>
@@ -1129,6 +1121,60 @@ FROM mass_project ORDER BY name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="mass_project" msprop:Generator_TableClassName="mass_projectDataTable" msprop:Generator_TableVarName="tablemass_project" msprop:Generator_RowChangedName="mass_projectRowChanged" msprop:Generator_TablePropName="mass_project" msprop:Generator_RowDeletingName="mass_projectRowDeleting" msprop:Generator_RowChangingName="mass_projectRowChanging" msprop:Generator_RowEvHandlerName="mass_projectRowChangeEventHandler" msprop:Generator_RowDeletedName="mass_projectRowDeleted" msprop:Generator_RowClassName="mass_projectRow" msprop:Generator_UserTableName="mass_project" msprop:Generator_RowEvArgName="mass_projectRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" type="xs:int" />
+              <xs:element name="prototype" msprop:Generator_ColumnVarNameInTable="columnprototype" msprop:Generator_ColumnPropNameInRow="prototype" msprop:Generator_ColumnPropNameInTable="prototypeColumn" msprop:Generator_UserColumnName="prototype" type="xs:int" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="shiptype" msprop:Generator_ColumnVarNameInTable="columnshiptype" msprop:Generator_ColumnPropNameInRow="shiptype" msprop:Generator_ColumnPropNameInTable="shiptypeColumn" msprop:Generator_UserColumnName="shiptype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mute" msprop:Generator_ColumnVarNameInTable="columnmute" msprop:Generator_ColumnPropNameInRow="mute" msprop:Generator_ColumnPropNameInTable="muteColumn" msprop:Generator_UserColumnName="mute">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="master" msprop:Generator_ColumnVarNameInTable="columnmaster" msprop:Generator_ColumnPropNameInRow="master" msprop:Generator_ColumnPropNameInTable="masterColumn" msprop:Generator_UserColumnName="master">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="project_group" msprop:Generator_ColumnVarNameInTable="columnproject_group" msprop:Generator_ColumnPropNameInRow="project_group" msprop:Generator_ColumnPropNameInTable="project_groupColumn" msprop:Generator_UserColumnName="project_group" type="xs:int" />
+              <xs:element name="num_type1" msprop:Generator_ColumnVarNameInTable="columnnum_type1" msprop:Generator_ColumnPropNameInRow="num_type1" msprop:Generator_ColumnPropNameInTable="num_type1Column" msprop:Generator_UserColumnName="num_type1" type="xs:int" />
+              <xs:element name="num_type2" msprop:Generator_ColumnVarNameInTable="columnnum_type2" msprop:Generator_ColumnPropNameInRow="num_type2" msprop:Generator_ColumnPropNameInTable="num_type2Column" msprop:Generator_UserColumnName="num_type2" type="xs:int" />
+              <xs:element name="deleted" msprop:Generator_ColumnVarNameInTable="columndeleted" msprop:Generator_ColumnPropNameInRow="deleted" msprop:Generator_ColumnPropNameInTable="deletedColumn" msprop:Generator_UserColumnName="deleted" type="xs:int" />
+              <xs:element name="lgb" msprop:Generator_ColumnVarNameInTable="columnlgb" msprop:Generator_ColumnPropNameInRow="lgb" msprop:Generator_ColumnPropNameInTable="lgbColumn" msprop:Generator_UserColumnName="lgb" type="xs:decimal" />
+              <xs:element name="bgb" msprop:Generator_ColumnVarNameInTable="columnbgb" msprop:Generator_ColumnPropNameInRow="bgb" msprop:Generator_ColumnPropNameInTable="bgbColumn" msprop:Generator_UserColumnName="bgb" type="xs:decimal" />
+              <xs:element name="hgb" msprop:Generator_ColumnVarNameInTable="columnhgb" msprop:Generator_ColumnPropNameInRow="hgb" msprop:Generator_ColumnPropNameInTable="hgbColumn" msprop:Generator_UserColumnName="hgb" type="xs:decimal" />
+              <xs:element name="custom_stp_m" msprop:Generator_ColumnVarNameInTable="columncustom_stp_m" msprop:Generator_ColumnPropNameInRow="custom_stp_m" msprop:Generator_ColumnPropNameInTable="custom_stp_mColumn" msprop:Generator_UserColumnName="custom_stp_m" type="xs:decimal" />
+              <xs:element name="custom_stp_z" msprop:Generator_ColumnVarNameInTable="columncustom_stp_z" msprop:Generator_ColumnPropNameInRow="custom_stp_z" msprop:Generator_ColumnPropNameInTable="custom_stp_zColumn" msprop:Generator_UserColumnName="custom_stp_z" type="xs:decimal" />
+              <xs:element name="custom_stp" msprop:Generator_ColumnVarNameInTable="columncustom_stp" msprop:Generator_ColumnPropNameInRow="custom_stp" msprop:Generator_ColumnPropNameInTable="custom_stpColumn" msprop:Generator_UserColumnName="custom_stp" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1147,10 +1193,6 @@ FROM mass_project ORDER BY name</CommandText>
       <xs:selector xpath=".//mstns:mass_main_tab" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:unique name="mass_project_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:mass_project" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
     <xs:unique name="mass_stp_21_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:mass_stp_21" />
       <xs:field xpath="mstns:id" />
@@ -1161,6 +1203,10 @@ FROM mass_project ORDER BY name</CommandText>
     </xs:unique>
     <xs:unique name="mass_variants_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:mass_variants" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="mass_project_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:mass_project" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>
