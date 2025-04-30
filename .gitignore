@@ -27,12 +27,7 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
-Deploy/MainPage.dll
-MainPage/bin/Debug/MainPage.dll
-MainPage/bin/Debug/MainPage.pdb
-MainPage/obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache
-MainPage/obj/x86/Debug/MainPage.dll
-MainPage/obj/*
-SampleProgram2.suo
-MainPage/bin/*
+*/obj/*
+*.suo
+*/bin/*
 Deploy/*
