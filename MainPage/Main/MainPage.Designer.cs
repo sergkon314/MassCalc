@@ -32,6 +32,7 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.page1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.page2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.massClaimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel = new System.Windows.Forms.Panel();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.page1ToolStripMenuItem,
-            this.page2ToolStripMenuItem});
+            this.page2ToolStripMenuItem,
+            this.massClaimToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -60,14 +62,21 @@
             this.page1ToolStripMenuItem.Name = "page1ToolStripMenuItem";
             this.page1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.page1ToolStripMenuItem.Text = "MassBids";
-            this.page1ToolStripMenuItem.Click += new System.EventHandler(this.page1ToolStripMenuItem_Click);
+            this.page1ToolStripMenuItem.Click += new System.EventHandler(this.massBidsToolStripMenuItem_Click);
             // 
             // page2ToolStripMenuItem
             // 
             this.page2ToolStripMenuItem.Name = "page2ToolStripMenuItem";
             this.page2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.page2ToolStripMenuItem.Text = "MassCalc";
-            this.page2ToolStripMenuItem.Click += new System.EventHandler(this.page2ToolStripMenuItem_Click);
+            this.page2ToolStripMenuItem.Click += new System.EventHandler(this.massCalcToolStripMenuItem_Click);
+            // 
+            // massClaimToolStripMenuItem
+            // 
+            this.massClaimToolStripMenuItem.Name = "massClaimToolStripMenuItem";
+            this.massClaimToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.massClaimToolStripMenuItem.Text = "MassClaim";
+            this.massClaimToolStripMenuItem.Click += new System.EventHandler(this.massClaimToolStripMenuItem_Click);
             // 
             // panel
             // 
@@ -99,6 +108,7 @@
         private System.Windows.Forms.ToolStripMenuItem page1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem page2ToolStripMenuItem;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.ToolStripMenuItem massClaimToolStripMenuItem;
 
     }
 }

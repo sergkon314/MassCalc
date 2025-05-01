@@ -17,14 +17,19 @@ namespace dms.pages.Main
             this.Dock = DockStyle.Fill;
         }
 
-        private void page1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void massBidsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreatePage("MassBids");
         }
 
-        private void page2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void massCalcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreatePage("MassCalc");
+        }
+
+        private void massClaimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreatePage("MassClaim");
         }
 
         private void CreatePage(string pageName) 
@@ -48,6 +53,11 @@ namespace dms.pages.Main
                     page_to_add = new MassCalc(this, pageName);
 
                 }
+                else if (pageName == "MassClaim")
+                {
+                    page_to_add = new MassClaim(this, pageName);
+
+                }
                 else
                 {
                     dms.pages.Utils.DmsMsgBoxs.Ok("Неизвестная страница");
@@ -60,5 +70,6 @@ namespace dms.pages.Main
                 this.Controls.SetChildIndex(page_to_add, 0);
             }
         }
+
     }
 }

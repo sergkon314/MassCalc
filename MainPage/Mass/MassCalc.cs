@@ -1123,7 +1123,7 @@ namespace dms.pages.Main
             this.btn_report2.TabIndex = 6;
             this.btn_report2.Text = "Отчет";
             this.btn_report2.UseVisualStyleBackColor = true;
-            //this.btn_report2.Click += new System.EventHandler(this.btn_report2_Click);
+            this.btn_report2.Click += new System.EventHandler(this.btn_report2_Click);
             // 
             // btn_calc2
             // 
@@ -1498,10 +1498,10 @@ namespace dms.pages.Main
             Report1Entry();
         }
 
-        //private void btn_report2_Click(object sender, EventArgs e)
-        //{
-        //    Report2Entry();
-        //}
+        private void btn_report2_Click(object sender, EventArgs e)
+        {
+            Report2Entry();
+        }
 
         private void txt_gb_KeyPress(object sender, KeyPressEventArgs e)
         {

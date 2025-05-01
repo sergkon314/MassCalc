@@ -122,12 +122,12 @@ namespace dms.pages.Mass.Dialogs
         {
             DataTableHelper.SortDataTable(dt, "code ASC");
             string l, l1, l2, l3, text, code;
-            uint v;
+            int v;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 text = dt.Rows[i].Field<string>("code_name");
                 code = dt.Rows[i].Field<string>("code");
-                v = dt.Rows[i].Field<uint>("is_visible");
+                v = dt.Rows[i].Field<int>("is_visible");
                 l1 = code.Substring(0, 2);
                 l2 = code.Substring(2, 2);
                 l3 = code.Substring(4, 2);

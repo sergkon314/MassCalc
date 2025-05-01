@@ -224,11 +224,11 @@ namespace dms.pages.Main
                     {
                         string code = r.code;
                         VR[] row = dt_variants_koeff.Select("code='" + code + "'") as VR[];
-                        float koeff = (float)row[0][column_name];
+                        decimal koeff = (decimal)row[0][column_name];
                         if (code == "13000000" && i == 1) koeff *= mute;
                         if (koeff != 0)
                         {
-                            Addmass_data_bidRow(ref dt, r.code, r.name_code, (decimal)(r.m * (decimal)koeff), r.x, r.y, r.z);
+                            Addmass_data_bidRow(ref dt, r.code, r.name_code, (r.m * koeff), r.x, r.y, r.z);
                         }
                     }
                 }
